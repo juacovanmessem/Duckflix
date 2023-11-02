@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "name": "camila ayelen",
+      "lastname": "brahim",
+      "email": "camila.brahim@alu.frt.utn.edu.ar",
+      "password": "camila1234",
+      "role": "client",
+      "id": 1
+    }
+  ]
+}
