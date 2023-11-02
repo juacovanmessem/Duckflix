@@ -1,0 +1,26 @@
+{
+  "films": [
+    {
+      "title": "Volver al futuro",
+      "category": "Ciencia Ficción",
+      "sinopsis": "Un adolescente llamado Marty McFly que accidentalmente viaja al pasado y pone en peligro su propia existencia en el futuro.",
+      "type": "Película",
+      "time": "1h 56m",
+      "year": "1975",
+      "image": "https://static.wikia.nocookie.net/bttf/images/5/52/Back_to_the_future.jpg/revision/latest/scale-to-width-down/1200?cb=20230922165717&path-prefix=es",
+      "status": false,
+      "id": 1
+    },
+    {
+      "title": "El padrino",
+      "category": "Acción",
+      "sinopsis": "Don Vito Corleone es el respetado y temido jefe de una de las cinco familias de la mafia de Nueva York en los años 40.",
+      "type": "Película",
+      "time": "2h 55min",
+      "year": "1960",
+      "image": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRFnUIGQQtTzUxD9Y19nl3uum8SZA6TSA8eWnJoPy1UdHVF8fDn",
+      "status": false,
+      "id": 2
+    }
+  ]
+}
