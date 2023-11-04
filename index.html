@@ -43,7 +43,7 @@
             </li>
           </ul>
           <ul>
-              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Iniciar Sesion</button>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Iniciar Sesión</button>
               <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
@@ -62,19 +62,20 @@
                           <input type="password" class="form-control" id="passwordLogin" value="">
                         </div>
                         <div class="align-items-center ">  
-                          <button type="button" class="btn btn-primary d-flex justify-content-start" onclick="loginUser()">Ingresar</button><a class="d-flex justify-content-end" href="./passwordnew.html">Modifica tu contraseña!</a>
+                          <button type="button" class="btn btn-primary d-flex justify-content-start" onclick="loginUser()">Ingresar</button><a class="d-flex justify-content-end" href="./pages/password.html">Modificar mi Contraseña!</a>
                         </div> 
                       </form>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerra</button>
-                      <button type="button" class="btn btn-primary">Understood</button>
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  
                     </div>
                   </div>
                 </div>
               </div>
-              <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Registrarse</button>
-              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+
+              <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#register">Registrarse</button>
+              <div class="modal fade" id="register" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -84,15 +85,16 @@
                     <div class="modal-body">
                       <form>
                         <div class="mb-3">
-                          <label for="name" class="form-label">Nombre</label>
-                          <input type="text" class="form-control" id="name" value="">
-                        </div>
-                        <div class="mb-3">
-                          <label for="lastname" class="form-label">Apellido</label>
-                          <input type="text" class="form-control" id="lastname" value="">
-                        </div>
-                        <div class="mb-3">
-                          <label for="email" class="form-label">Correo electronico</label>
+                          <div class="mb-3">
+                            <label for="name" class="form-label">Nombre/s</label>
+                            <input type="text" class="form-control" id="name" value="">
+                          </div>
+                          <div class="mb-3">
+                            <label for="lastname" class="form-label">Apellido</label>
+                            <input type="text" class="form-control" id="lastname" value="">
+                          </div>
+                          <div class="mb-3">
+                          <label for="email" class="form-label">Correo Electronico</label>
                           <input type="email" class="form-control" id="email" aria-describedby="emailHelp" value="">
                         </div>
                         <div class="mb-3">
@@ -100,11 +102,12 @@
                           <input type="password" class="form-control" id="password" value="">
                         </div>
                         <button type="button" class="btn btn-primary" onclick="createUser()">Registrase</button>
-                      </form>
+                      
+                    </div></form>
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                      <button type="button" class="btn btn-primary">Understood</button>
+                      
                     </div>
                   </div>
                 </div>
@@ -132,6 +135,8 @@
           </div>
       </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="../js/users.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

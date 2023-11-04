@@ -43,37 +43,67 @@
             </li>
           </ul>
           <ul>
-              <button class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Registrase</button>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Iniciar Sesion</button>
               <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                      <h1 class="modal-title fs-5" id="staticBackdropLabel">Iniciar Sesion</h1>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                      ...
+                      <form>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Correo electronico</label>
+                          <input type="email" class="form-control" id="emailLogin" aria-describedby="emailHelp" value="">
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                          <input type="password" class="form-control" id="passwordLogin" value="">
+                        </div>
+                        <div class="align-items-center ">  
+                          <button type="button" class="btn btn-primary d-flex justify-content-start" onclick="loginUser()">Ingresar</button><a class="d-flex justify-content-end" href="./passwordnew.html">Modifica tu contraseña!</a>
+                        </div> 
+                      </form>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                       <button type="button" class="btn btn-primary">Understood</button>
                     </div>
                   </div>
                 </div>
               </div>
-              <button class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Iniciar Secion</button>
-              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#register">Registrarse</button>
+              <div class="modal fade" id="register" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                      <h1 class="modal-title fs-5" id="staticBackdropLabel">Registrarse</h1>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                      ...
+                      <form>
+                        <div class="mb-3">
+                          <label for="name" class="form-label">Nombre</label>
+                          <input type="text" class="form-control" id="name" value="">
+                        </div>
+                        <div class="mb-3">
+                          <label for="lastname" class="form-label">Apellido</label>
+                          <input type="text" class="form-control" id="lastname" value="">
+                        </div>
+                        <div class="mb-3">
+                          <label for="email" class="form-label">Correo electronico</label>
+                          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" value="">
+                        </div>
+                        <div class="mb-3">
+                          <label for="password" class="form-label">Contraseña</label>
+                          <input type="password" class="form-control" id="password" value="">
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="createUser()">Registrase</button>
+                      </form>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                       <button type="button" class="btn btn-primary">Understood</button>
                     </div>
                   </div>

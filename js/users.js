@@ -44,14 +44,13 @@ const loginUser = async () => {
 
 
 
-
 const changePassword = async () => {
   const email = document.getElementById('emailRecovery').value;
   const password = document.getElementById('PasswordRecovery').value;
   const passwordNew = document.getElementById('newPassword').value;
   const passwordConfirm = document.getElementById('confirmPassword').value;
 
-  const result = await fetch('  http://localhost:3000/users');
+  const result = await fetch('http://localhost:3000/users');
   const users = await result.json();
 
   const user = users.find(usuario => usuario.email === email && usuario.password === password)
@@ -60,7 +59,7 @@ const changePassword = async () => {
 
   if(user){
     if(passwordNew === passwordConfirm){
-      fetch(`   http://localhost:3000/users/${id}`,{
+      fetch(`http://localhost:3000/users/${id}`,{
       method:'PATCH',
       body: JSON.stringify({
         password: passwordNew
