@@ -81,7 +81,4 @@ const publish = async (film) => {
   alert ('Contenido publicado con exito')
 };
 
-
-
-
 window.onload = loadTable ();
