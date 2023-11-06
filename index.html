@@ -54,7 +54,19 @@
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                      ...
+                      <form>
+                        <div class="mb-3">
+                          <label for="emailLogin" class="form-label">Correo electronico</label>
+                          <input type="email" class="form-control" id="emailLogin" aria-describedby="emailHelp" value="">
+                        </div>
+                        <div class="mb-3">
+                          <label for="passwordLogin" class="form-label">Contraseña</label>
+                          <input type="password" class="form-control" id="passwordLogin" value="">
+                        </div>
+                        <div class="align-items-center ">  
+                          <button type="button" class="btn btn-primary d-flex justify-content-start" onclick="loginUser()">Ingresar</button><a class="d-flex justify-content-end" href="./pages/password.html">Modificar mi Contraseña!</a>
+                        </div> 
+                      </form>
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
