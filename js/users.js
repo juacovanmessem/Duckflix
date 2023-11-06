@@ -70,7 +70,7 @@ const changePassword = async () => {
     })
     alert('Cambiaste la Contraseña');
     }else{
-      alert('las constraseñas no coinciden')
+      alert('Las constraseñas no coinciden')
     }
     
   }else{
