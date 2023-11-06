@@ -97,18 +97,18 @@
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Formulario de adición de contenido</h1>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                   <form>
                     <div class="mb-3">
                       <label for="titleInput" class="form-label">Título</label>
-                      <input type="text" class="form-control" id="titleInput">
+                      <input type="text" class="form-control" id="titleInput" required>
                     </div>
                     <div class="mb-3">
                       <label for="categoryInput" class="form-label">Categoría</label>
-                      <select class="form-select" aria-label="Default select example" id="categoryInput">
+                      <select class="form-select" aria-label="Default select example" id="categoryInput" required>
                         <option selected>--</option>
                         <option value="Acción">Acción</option>
                         <option value="Ciencia Ficción">Ciencia Ficción</option>
@@ -119,11 +119,11 @@
                     </div>
                     <div class="mb-3">
                       <label for="sinopsisInput" class="form-label">Sinopsis</label>
-                      <input type="text" class="form-control" id="sinopsisInput">
+                      <input type="text" class="form-control" id="sinopsisInput" required>
                     </div>
                     <div class="mb-3">
                       <label for="typeInput" class="form-label">Serie o Película</label>
-                      <select class="form-select" aria-label="Default select example" id="typeInput">
+                      <select class="form-select" aria-label="Default select example" id="typeInput" required>
                         <option selected>--</option>
                         <option value="Serie">Serie</option>
                         <option value="Película">Película</option>
@@ -131,20 +131,20 @@
                     </div>
                     <div class="mb-3">
                       <label for="timeInput" class="form-label">Duración</label>
-                      <input type="text" class="form-control" id="timeInput">
+                      <input type="text" class="form-control" id="timeInput" required>
                     </div>
                     <div class="mb-3">
                       <label for="yearInput" class="form-label">Año de lanzamiento</label>
-                      <input type="number" class="form-control" id="yearInput">
+                      <input type="number" class="form-control" id="yearInput" required>
                     </div>
                     <div class="mb-3">
                       <label for="imageInput" class="form-label">URL de imagen para portada</label>
-                      <input type="text" class="form-control" id="imageInput">
+                      <input type="text" class="form-control" id="imageInput" required>
                     </div>
                   </form>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                   <button type="submit" class="btn btn-primary" id="save" onclick="addContent()">Guardar</button>
                 </div>
               </div>
