@@ -3,22 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link href="../styles/contact.css" rel="stylesheet">
-  <title>Document</title>
+  <link href="../styles/aboutUs.css" rel="stylesheet">
+  <title>Duckflix</title>
 </head>
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg "
+    <nav class="navbar navbar-expand-lg ">
       <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html"><img height="40" src="../assets/imagenes/logo.png" alt=""><img height="40" src="../assets/imagenes/image-removebg-preview.png" alt=""></a>
+        <a class="navbar-brand" href="../index.html"><img height="40" src="../assets/imagenes/logo.png" alt=""><img height="40" src="../assets/imagenes/Duckflix.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active text-white" aria-current="page" href="../index.html">Inicio</a>
+              <a class="nav-link active text-white" aria-current="page" href="#">Inicio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-white" href="#">Series</a>
@@ -45,42 +46,74 @@
             </li>
           </ul>
           <ul>
-              <button class="btn text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Registrase</button>
-              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      ...
-                    </div>
+            <button class="btn text-white" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar sesión</button>
+            <div class="modal fade" id="modalLogin" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Iniciar sesión</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="emailLogin" class="form-label">Correo electrónico</label>
+                        <input type="email" class="form-control" id="emailLogin" aria-describedby="emailHelp" value="" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="passwordLogin" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="passwordLogin" value="" required>
+                      </div>
+                      <div class="align-items-center ">  
+                        <a class="d-flex justify-content-end" href="./pages/password.html">Modificar mi contraseña</a>
+                        <button type="button" class="btn btn-primary d-flex justify-content-start" onclick="loginUser()">Ingresar</button>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="btn text-white" data-bs-toggle="modal" data-bs-target="#modalRegister">Registrarse</button>
+            <div class="modal fade" id="modalRegister" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Registrarse</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <div class="mb-3">
+                          <label for="name" class="form-label">Nombre/s</label>
+                          <input type="text" class="form-control" id="name" value="" required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="lastname" class="form-label">Apellido</label>
+                          <input type="text" class="form-control" id="lastname" value="" required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="email" class="form-label">Correo Electrónico</label>
+                          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" value="" required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="password" class="form-label">Contraseña</label>
+                          <input type="password" class="form-control" id="password" value="" required>
+                        </div>
+                          <button type="button" class="btn btn-primary" onclick="createUser()">Registrarse</button>
+                        </div>
+                      </div>
+                    </form>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Understood</button>
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                     </div>
                   </div>
                 </div>
               </div>
-              <button class="btn text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Iniciar Secion</button>
-              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      ...
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Understood</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            </div>
           </ul>
         </div>
       </div>
@@ -89,20 +122,23 @@
   <main>
 
   </main>
-  <footer>
-    <footer class="text-light py-4" >
-      <div class="container">
-          <div class="row">
-              <div class="col-md-6 text-dark">
-                  <p><a class="btn" href="">Sobre nosotros</a></p>
-                  <p><a class="btn" href="">Contactanos</a></p> 
-              </div>
-              <div class="col-md-6 text-dark">
-                  <p><button type="button" class="btn"><img width=25 height=25 src="../assets/imagenes/face-removebg-preview.png" ></button><button type="button" class="btn"><img width=25 height=25 src="../assets/imagenes/insta-removebg-preview.png"></button><button type="button" class="btn"><img width=25 height=25 src="../assets/imagenes/twit.png"></button>
-                  <p><a class="btn" href="./404.html">Política de Privacidad | Términos y Condiciones</a></p>
-              </div>
-          </div>
+  <footer class="text-light py-4" >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-dark">
+          <p><a class="btn text-white" href="">Sobre nosotros</a></p>
+          <p><a class="btn text-white" href="./contact.html">Contactanos</a></p> 
+        </div>
+      <div class="col-md-6 text-dark">
+        <p>
+          <button type="button" class="btn"><a href="./404.html"><i class="bi bi-facebook h1 m-2 text-white"></i></a></button>
+          <button type="button" class="btn"><a href="./404.html"><i class="bi bi-instagram h1 m-2 text-white"></i></a></button>
+          <button type="button" class="btn"><a href="./404.html"><i class="bi bi-twitter h1 m-2 text-white"></i></a></i></button>
+        <p>
+          <a class="btn text-white" href="./pages/404.html">Política de Privacidad | Términos y Condiciones</a></p>
       </div>
+    </div>
+  </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
