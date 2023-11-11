@@ -5,8 +5,110 @@
       "lastname": "brahim",
       "email": "camila.brahim@alu.frt.utn.edu.ar",
       "password": "camila123",
-      "role": "client",
+      "role": "admin",
       "id": 1
+    },
+    {
+      "email": "lauty36@gmail.com",
+      "password": "lautaro2023",
+      "role": "admin",
+      "id": 2
+    },
+    {
+      "name": "laura",
+      "lastname": "perez",
+      "email": "laura@gmail.com",
+      "password": "laura1234",
+      "role": "client",
+      "id": 3
+    },
+    {
+      "name": "emanuel",
+      "lastname": "bravo",
+      "email": "richardmask21@gmail.com",
+      "password": "bravo12345",
+      "role": "client",
+      "id": 4
+    },
+    {
+      "name": "",
+      "lastname": "",
+      "email": "",
+      "password": "",
+      "role": "client",
+      "id": 5
+    },
+    {
+      "name": "jimena",
+      "lastname": "perez",
+      "email": "jimena@gmail.com",
+      "password": "jimena1234",
+      "role": "client",
+      "id": 6
+    },
+    {
+      "name": "elida",
+      "lastname": "recalde",
+      "email": "eli@gmail.com",
+      "password": "eli1234",
+      "role": "client",
+      "id": 7
+    },
+    {
+      "name": "jorge",
+      "lastname": "bravo",
+      "email": "jorge@gmail.com",
+      "password": "jorge1234",
+      "role": "client",
+      "id": 8
+    },
+    {
+      "name": "jorge",
+      "lastname": "bravo",
+      "email": "jorge@gmail.com",
+      "password": "jorge",
+      "role": "client",
+      "id": 9
+    },
+    {
+      "name": "jorge",
+      "lastname": "barrionuevo",
+      "email": "jorge@gmail.com",
+      "password": "jor123",
+      "role": "client",
+      "id": 10
+    },
+    {
+      "name": "jorge",
+      "lastname": "bravo",
+      "email": "jorge@gmail.com",
+      "password": "1234",
+      "role": "client",
+      "id": 11
+    },
+    {
+      "name": "josefina",
+      "lastname": "bernadal",
+      "email": "josefina@gmail.com",
+      "password": "josefina123",
+      "role": "client",
+      "id": 12
+    },
+    {
+      "name": "luciano",
+      "lastname": "bravo",
+      "email": "luciano@gmail.com",
+      "password": "luciano1234",
+      "role": "client",
+      "id": 13
+    },
+    {
+      "name": "luciano",
+      "lastname": "bravo",
+      "email": "luciano@gmail.com",
+      "password": "luciano123",
+      "role": "client",
+      "id": 14
     }
   ]
 }
