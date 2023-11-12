@@ -38,40 +38,42 @@ const categoryContent = async () => {
 
 
   content.forEach(element => {
-    switch (element.category) {
-      case 'Acción': 
+    if (element.status == true) {
+      switch (element.category) {
+        case 'Acción': 
         actionDiv.innerHTML += `<div class="position-relative  d-inline hover">
-          <p class="position-absolute top-50 start-50 translate-middle w-100 p-2 d-inline-block">${element.title}</p>
-          <img src=${element.image} class="img-fluid img-thumbnail rounded content m-1 my-2" alt="${element.title}"></img>
+        <p class="position-absolute top-50 start-50 translate-middle w-100 p-2 d-inline-block">${element.title}</p>
+        <img src=${element.image} class="img-fluid img-thumbnail rounded content m-1 my-2" alt="${element.title}"></img>
         </div>`
         break;
-      case 'Ciencia Ficción': 
+        case 'Ciencia Ficción': 
         cifiDiv.innerHTML += `<div class="position-relative  d-inline hover">
         <p class="position-absolute top-50 start-50 translate-middle w-100 p-2 d-inline-block">${element.title}</p>
         <img src=${element.image} class="img-fluid img-thumbnail rounded content m-1 my-2" alt="${element.title}"></img>
-      </div>`
+        </div>`
         break;
-      case 'Romance': 
+        case 'Romance': 
         romanceDiv.innerHTML += `<div class="position-relative  d-inline hover">
         <p class="position-absolute top-50 start-50 translate-middle w-100 p-2 d-inline-block">${element.title}</p>
         <img src=${element.image} class="img-fluid img-thumbnail rounded content m-1 my-2" alt="${element.title}"></img>
-      </div>`
+        </div>`
         break;
-      case 'Terror': 
+        case 'Terror': 
         hororDiv.innerHTML += `<div class="position-relative  d-inline hover">
         <p class="position-absolute top-50 start-50 translate-middle w-100 p-2 d-inline-block">${element.title}</p>
         <img src=${element.image} class="img-fluid img-thumbnail rounded content m-1 my-2" alt="${element.title}"></img>
-      </div>`
+        </div>`
         break;
-      case 'Comedia': 
+        case 'Comedia': 
         comediDiv.innerHTML += `<div class="position-relative  d-inline hover">
         <p class="position-absolute top-50 start-50 translate-middle w-100 p-2 d-inline-block">${element.title}</p>
         <img src=${element.image} class="img-fluid img-thumbnail rounded content m-1 my-2" alt="${element.title}"></img>
-      </div>`
+        </div>`
         break;
-      default:
-        break;
+        default:
+          break;
+        }
       }
-  });
-};
-categoryContent ()
+      });
+    };
+    categoryContent ()
