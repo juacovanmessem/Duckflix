@@ -5,7 +5,6 @@ const spotLightContent = async () => {
   let result = await fetch ('http://localhost:3000/films')
   let content = await result.json ()
   let findSpotLight = content.find (para => para.spotLight == true)
-  console.log(findSpotLight)
   
   let div = document.getElementById ('spotLight')
   div.innerHTML = `<div class="carousel-inner">
@@ -30,7 +29,49 @@ spotLightContent()
 const categoryContent = async () => {
   let result = await fetch ('http://localhost:3000/films')
   let content = await result.json ()
-  content = array.forEach(element => {
-    
+
+  let actionDiv = document.getElementById ('actionContent')
+  let cifiDiv = document.getElementById ('cifiContent')
+  let hororDiv = document.getElementById ('horrorContent')
+  let romanceDiv = document.getElementById ('romanceContent')
+  let comediDiv = document.getElementById ('comediContent')
+
+
+  content.forEach(element => {
+    switch (element.category) {
+      case 'Acción': 
+        actionDiv.innerHTML += `<div class="position-relative  d-inline hover">
+          <p class="position-absolute top-50 start-50 translate-middle w-100 p-2 d-inline-block">${element.title}</p>
+          <img src=${element.image} class="img-fluid img-thumbnail rounded content m-1 my-2" alt="${element.title}"></img>
+        </div>`
+        break;
+      case 'Ciencia Ficción': 
+        cifiDiv.innerHTML += `<div class="position-relative  d-inline hover">
+        <p class="position-absolute top-50 start-50 translate-middle w-100 p-2 d-inline-block">${element.title}</p>
+        <img src=${element.image} class="img-fluid img-thumbnail rounded content m-1 my-2" alt="${element.title}"></img>
+      </div>`
+        break;
+      case 'Romance': 
+        romanceDiv.innerHTML += `<div class="position-relative  d-inline hover">
+        <p class="position-absolute top-50 start-50 translate-middle w-100 p-2 d-inline-block">${element.title}</p>
+        <img src=${element.image} class="img-fluid img-thumbnail rounded content m-1 my-2" alt="${element.title}"></img>
+      </div>`
+        break;
+      case 'Terror': 
+        hororDiv.innerHTML += `<div class="position-relative  d-inline hover">
+        <p class="position-absolute top-50 start-50 translate-middle w-100 p-2 d-inline-block">${element.title}</p>
+        <img src=${element.image} class="img-fluid img-thumbnail rounded content m-1 my-2" alt="${element.title}"></img>
+      </div>`
+        break;
+      case 'Comedia': 
+        comediDiv.innerHTML += `<div class="position-relative  d-inline hover">
+        <p class="position-absolute top-50 start-50 translate-middle w-100 p-2 d-inline-block">${element.title}</p>
+        <img src=${element.image} class="img-fluid img-thumbnail rounded content m-1 my-2" alt="${element.title}"></img>
+      </div>`
+        break;
+      default:
+        break;
+      }
   });
 };
+categoryContent ()

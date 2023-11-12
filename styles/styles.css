@@ -17,12 +17,21 @@ footer{
   width: 17%;
   background-color: #FFE3B3;
 }
+.hover p{
+  color: #ffffff00;
+  background-color: #00000000;
+}
 
-.hover:hover {
+.hover:hover p{
+  color: #ffffff;
+  background:linear-gradient(#174855, #26798E);
+}
+.hover:hover img{
   width: 20%;
   box-shadow: #26798E .3rem .3rem;
-  transition: 1s;
+  transition: 1.5s;
   background-color: #FFC172;
+  opacity: 100%;
 }
 
 .bgGradient{
