@@ -1,8 +1,8 @@
 function enviarMail() {
-  let usuario = document.getElementById("name").value
-  let mail = document.getElementById("exampleFormControlInput1").value
+  let usuario = document.getElementById("usuario").value
+  let mail = document.getElementById("mail").value
   let asunto = document.getElementById("asunto").value
-  let mensaje = document.getElementById("exampleFormControlTextarea1").value
+  let mensaje = document.getElementById("texArea").value
   console.log(mail);
   if ('' === usuario, '' === mail, '' === asunto, '' === mensaje) {
     alert('Complete el formulario')
