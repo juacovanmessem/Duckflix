@@ -4,3 +4,13 @@
 footer{
   background-color:#26798E
 }
+body{
+  background: linear-gradient(to right, #26798E, #63CAA7, #FFC172, #FFE3B3);
+}
+.item{
+  margin-top: 10px;
+}
+.red{
+  font-size: 40px;
+  margin: 10px;
+}
