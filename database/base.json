@@ -4,8 +4,16 @@
       "name": "camila ayelen",
       "lastname": "brahim",
       "email": "camila.brahim@alu.frt.utn.edu.ar",
-      "password": "camila123",
+      "password": "juaco123",
       "role": "client",
+      "id": 1
+    },
+    {
+      "name": "joaquin",
+      "lastname": "van messem",
+      "email": "vanmessemjoaquin@gmail.com",
+      "password": "juaco1234",
+      "role": "admin",
       "id": 1
     }
   ]
