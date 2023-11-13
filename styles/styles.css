@@ -3,10 +3,10 @@ body{
 }
 
 .navbar{
-  background:linear-gradient(to bottom right,#26798E, #63CAA7)
+  background-color:#26798E
 }
 footer{
-  background:linear-gradient(#174855, #26798E);
+  background-color:#26798E
 }
 
 .spotLight {
