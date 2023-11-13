@@ -2,7 +2,7 @@ function enviarMail() {
   let usuario = document.getElementById("usuario").value
   let mail = document.getElementById("mail").value
   let asunto = document.getElementById("asunto").value
-  let mensaje = document.getElementById("texArea").value
+  let mensaje = document.getElementById("textArea").value
   console.log(mail);
   if ('' === usuario, '' === mail, '' === asunto, '' === mensaje) {
     alert('Complete el formulario')
