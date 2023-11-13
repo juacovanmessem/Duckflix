@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link href="../styles/aboutUs.css" rel="stylesheet">
-  <title>Duckflix</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link href="../styles/contact.css" rel="stylesheet">
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <title>Document</title>
 </head>
 <body>
   <header>
@@ -120,7 +122,48 @@
     </nav>
   </header>
   <main>
-
+    <div class="d-flex justify-content-center">
+      <img src="../assets/imagenes/logo.png" height="100px" alt="">
+    </div>
+    <div class="bg-white container rounded colum-md-6">
+      <div>
+        <div>
+          <h1 class="d-flex justify-content-center">FORMULARIO DE CONTACTO</h1>
+        </div>
+        <div class="row g-0">
+          <div class="contacto col-md-6 d-flex align-items-center">
+            <ol>
+              <ul class="item"><i class="bi bi-envelope"></i>   Duckflix@gmail.com</ul>
+              <ul class="item"><i class="bi bi-geo-alt-fill"></i>Gral. Paz 576, T4000 San Miguel de Tucumán, Tucumán</ul>
+              <ul class="item"><i class="bi bi-telephone-fill"></i>0810-777-1234</ul>
+              <ul class="item"><a href="./404.html" type="button" class="red"><i class="bi bi-twitter"></i></a><a href="./404.html" type="button" class="red"><i class="bi bi-facebook"></i></a><a href="./404.html" type="button" class="red item"><i class="bi bi-instagram"></i></a></ul>
+            </ol>
+          </div>
+          <div class="col-md-6">
+            <form action="">
+              <div class="mb-3">
+                <label for="name" class="form-label">Usuario</label>
+                <input type="text" class="form-control" id="usuario" placeholder="Usuario" aria-label="Username" required aria-describedby="addon-wrapping">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="mail" required placeholder="nombre@gmail.com">
+              </div>
+              <div class="mb-3">
+                <label for="asunto" class="form-label">Asunto</label>
+                <input type="text" class="form-control" id="asunto" placeholder="Asunto" aria-label="Username" required aria-describedby="addon-wrapping">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="textArea" required rows="3" placeholder="Mensaje"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary m-2" onclick="enviarMail()">Enviar Formulario</button>
+              <a href="../index.html" type="button" class="btn btn-secondary m-2">Volver al inicio</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
   <footer class="text-light py-4" >
     <div class="container">
@@ -140,6 +183,7 @@
     </div>
   </div>
   </footer>
+  <script src="../js/contact.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
