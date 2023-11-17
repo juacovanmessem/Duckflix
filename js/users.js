@@ -128,6 +128,28 @@ const logOut = () => {
   window.location.href = '../pages/login.html'
 }
 
+function enviarMail() {
+  let usuario = document.getElementById("usuario").value
+  let mail = document.getElementById("mail").value
+  console.log(mail);
+  if ('' === usuario, '' === mail) {
+    alert('Complete el formulario')
+  } else {
+    Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "maxikarsvnie@gmail.com",// La cuenta dada de alta
+    Password : "1B15125DCB5D69BA34B87F5233F50A6AB9CF",
+    To : mail, //Mail a donde va dirigido (quiero vincular el mail q ingreso la persona aqui)
+    From : "maxikarsvnie@gmail.com",//De donde se envia
+    Subject : "Gracias por contactarnos! Ingrese al sigueinte link si desea restaurar su contrasena ",
+    Body : `Solicitud para modificar la contrasena recibido desde la página de incio
+    Nombre de usuario = ${ usuario}, Correo electronico = ${mail}`
+    })
+    alert('Formulario enviado con exito');  
+  }
+ }
+
+
 
 /*
 const userInfo = async () => {
