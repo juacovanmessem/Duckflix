@@ -38,7 +38,7 @@ const loginUser = async () => {
     alert("Los datos ingresados son incorrectos");
   }
   if(user.password === password){
-    localStorage.setItem("admin", user.role);
+    localStorage.setItem("role", user.role);
     window.location.href = '../pages/adminFilm.html';
 
     alert("Ingreso Exitoso");
@@ -106,7 +106,7 @@ const lostPassword = async () => {
       fetch(`http://localhost:3000/users/${id}`,{
       method:'PATCH',
       body: JSON.stringify({
-        password: passwordNew;
+        password: passwordNew
       }),
       headers: {
         'Content-type' : 'application/json; charset=UTF-8',
@@ -124,7 +124,7 @@ const lostPassword = async () => {
 }
 
 const logOut = () => {
-  //localStorage.removeItem('role');
+  localStorage.removeItem('role');
   window.location.href = '../pages/login.html'
 }
 
