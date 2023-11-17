@@ -10,7 +10,7 @@
       "image": "https://cdn.forbes.com.mx/2015/10/back_to_the_future.jpg",
       "status": true,
       "id": 1,
-      "spotLight": false
+      "spotLight": true
     },
     {
       "title": "El Padrino",
@@ -18,23 +18,11 @@
       "sinopsis": "Don Vito Corleone es el respetado y temido jefe de una de las cinco familias de la mafia de Nueva York en los años 40.",
       "type": "Película",
       "time": "2h 55min",
-      "year": "1960",
+      "year": "1962",
       "image": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRFnUIGQQtTzUxD9Y19nl3uum8SZA6TSA8eWnJoPy1UdHVF8fDn",
       "status": false,
       "id": 2,
       "spotLight": false
-    },
-    {
-      "title": "Notas perfectas",
-      "category": "Comedia",
-      "sinopsis": "Beca, una nueva estudiante de la Universidad de Barden, se une a las Bellas, un coro femenino. Tras añadir una dosis de energía a su repertorio, las Bellas se enfrentan al coro masculino de la universidad.",
-      "type": "Película",
-      "time": "1h 52m",
-      "year": "2012",
-      "image": "https://ntvb.tmsimg.com/assets/p9276475_v_h8_af.jpg?w=1280&h=720",
-      "status": true,
-      "spotLight": true,
-      "id": 3
     }
   ]
 }
