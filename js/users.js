@@ -122,6 +122,13 @@ const lostPassword = async () => {
     alert("Los datos ingresados son incorrectos");
   }
 }
+
+const logOut = () => {
+  //localStorage.removeItem('role');
+  window.location.href = '../pages/login.html'
+}
+
+
 /*
 const userInfo = async () => {
   const id = localStorage.getItem("name")

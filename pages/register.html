@@ -26,19 +26,19 @@
         <div class="mb-3">
           <div class="mb-3">
             <label for="name" class="form-label">Nombre/s</label>
-            <input type="text" class="form-control" id="name" value="" required>
+            <input type="text" class="form-control" id="name" value="" maxlength="30" minlength="2" required>
           </div>
           <div class="mb-3">
             <label for="lastname" class="form-label">Apellido</label>
-            <input type="text" class="form-control" id="lastname" value="" required>
+            <input type="text" class="form-control" id="lastname" value="" maxlength="30" minlength="2" required>
           </div>
           <div class="mb-3">
             <label for="email" class="form-label">Correo Electrónico</label>
-            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" value="" required>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" value="" maxlength="64" minlength="10" required>
           </div>
           <div class="mb-3">
             <label for="password" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" id="password" value="" required>
+            <input type="password" class="form-control" id="password" value=""  maxlength="20" minlength="8"required>
           </div>
             <button type="button" class="btn btn-primary" onclick="createUser()">Registrarse</button>
             <div class="container-fluid">

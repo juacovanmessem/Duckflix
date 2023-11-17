@@ -24,11 +24,11 @@
       <form>
         <div class="mb-3">
           <label for="emailLogin" class="form-label">Correo electrónico</label>
-          <input type="email" class="form-control" id="emailLogin" aria-describedby="emailHelp" value="" required>
+          <input type="email" class="form-control" id="emailLogin" aria-describedby="emailHelp" value="" maxlength="64" minlength="1" required>
         </div>
         <div class="mb-3">
           <label for="passwordLogin" class="form-label">Contraseña</label>
-          <input type="password" class="form-control" id="passwordLogin" value="" required>
+          <input type="password" class="form-control" id="passwordLogin" value="" maxlength="15" minlength="8" required>
         </div>
         <div class="link-container">  
           <button type="button" class="btn btn-primary justify-content-start" onclick="loginUser()">Ingresar</button>
