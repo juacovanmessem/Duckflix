@@ -143,22 +143,22 @@
             <form action="">
               <div class="mb-3">
                 <label for="name" class="form-label">Usuario</label>
-                <input type="text" class="form-control" id="usuario" placeholder="Usuario" aria-label="Username" required aria-describedby="addon-wrapping">
+                <input type="text" class="form-control" id="name" placeholder="Usuario" aria-label="Username" required aria-describedby="addon-wrapping" minlength="6" maxlength="16">
               </div>
               <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Correo electrónico</label>
-                <input type="email" class="form-control" id="mail" required placeholder="nombre@gmail.com">
+                <input type="email" class="form-control" id="exampleFormControlInput1" required placeholder="nombre@gmail.com" maxlength="30">
               </div>
               <div class="mb-3">
                 <label for="asunto" class="form-label">Asunto</label>
-                <input type="text" class="form-control" id="asunto" placeholder="Asunto" aria-label="Username" required aria-describedby="addon-wrapping">
+                <input type="text" class="form-control" id="asunto" placeholder="Asunto" aria-label="Username" required aria-describedby="addon-wrapping" minlength="6" maxlength="16">
               </div>
               <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
-                <textarea class="form-control" id="textArea" required rows="3" placeholder="Mensaje"></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" required rows="3" placeholder="Mensaje"></textarea>
               </div>
               <button type="submit" class="btn btn-primary m-2" onclick="enviarMail()">Enviar Formulario</button>
-              <a href="../index.html" type="button" class="btn btn-secondary m-2">Volver al inicio</a>
+              <a href="" type="button" class="btn btn-secondary m-2">Volver al inicio</a>
             </form>
           </div>
         </div>
