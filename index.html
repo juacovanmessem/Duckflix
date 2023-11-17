@@ -3,44 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link href="./styles/styles.css" rel="stylesheet">
-  <title>Document</title>
+  <title>Duckflix</title>
 </head>
 <body>
   <header>
     <nav class="navbar navbar-expand-lg ">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img height="40" src="./assets/imagenes/logo.png" alt=""><img height="40" src="./assets/imagenes/image-removebg-preview.png" alt=""></a>
+        <a class="navbar-brand" href="#"><img height="40" src="./assets/imagenes/logo.png" alt=""><img height="40" src="./assets/imagenes/Duckflix.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active text-white" aria-current="page" href="#">Inicio</a>
+              <button class="btn btn-lin text-white">
+                <a class="nav-link active text-white" aria-current="page" href="./index.html">Inicio</a>
+              </button>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="#">Series</a>
+              <button class="btn btn-lin text-white" onclick="contentSerie()">
+                <a class="nav-link active text-white">Series</a>
+              </button>
             </li><li class="nav-item">
-              <a class="nav-link text-white" href="#">Películas</a>
+              <button class="btn btn-lin text-white" onclick="contentMovie()">
+                <a class="nav-link active text-white">Películas</a>
+              </button>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Categorías
-              </a>
+              <button class="btn btn-lin text-white">
+                <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorías</a>
+              </button>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Acción</a></li>
-                <li><a class="dropdown-item" href="#">Terror</a></li>
-                <li><a class="dropdown-item" href="#">Comedia</a></li>
-                <li><a class="dropdown-item" href="#">Románticas</a></li>
-                <li><a class="dropdown-item" href="#">Ciencias ficción</a></li>
+                <li><a class="dropdown-item" href="#actionContent">Acción</a></li>
+                <li><a class="dropdown-item" href="#horrorContent">Terror</a></li>
+                <li><a class="dropdown-item" href="#comediContent">Comedia</a></li>
+                <li><a class="dropdown-item" href="#romanceContent">Románticas</a></li>
+                <li><a class="dropdown-item" href="#cifiContent">Ciencias ficción</a></li>
               </ul>
             </li>
             <li>
               <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Busqueda" aria-label="Search">
-                <button type="button" class="btn btn-light"><img width=20 height=20 src="./assets/imagenes/Lupa-removebg-preview.png"></button>
+                <input class="form-control me-2" type="search" placeholder="Busqueda" aria-label="Search" id="searchInput">
+                <button type="button" class="btn btn-light" onclick="searchContent()"><img width=20 height=20 src="./assets/imagenes/Lupa-removebg-preview.png"></button>
               </form>
             </li>
           </ul>
@@ -51,23 +59,69 @@
     </nav>
   </header>
   <main>
+    <section>
+      <div id="spotLight" class="carousel carousel-dark slide">
+      </div>
+    </section>
+    <section>
+      <div id="content" class="p-4">
+        <div class="m-2 mt-4">
+          <h3 class="text-uppercase display-6">De acción</h3>
+          <div id="actionContent" class="text-center">
+            
+          </div>
+        </div>
+        <div id="category" class="m-2 mt-4">
+          <h3 class="text-uppercase display-6">De Terror</h3>
+          <div id="horrorContent" class="text-center">
+            
+          </div>
+        </div>
+        <div id="category" class="m-2 mt-4">
+          <h3 class="text-uppercase display-6">Comédia</h3>
+          <div id="comediContent" class="text-center">
+            
+          </div>
+        </div>
+        <div id="category" class="m-2 mt-4">
+          <h3 class="text-uppercase display-6">Románticas</h3>
+          <div id="romanceContent" class="text-center">
+            
+          </div>
+        </div>
+        <div id="category" class="m-2 mt-4">
+          <h3 class="text-uppercase display-6">De Ciencia Ficción</h3>
+          <div id="cifiContent" class="text-center">
 
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <footer class="text-light py-4" >
     <div class="container">
       <div class="row">
         <div class="col-md-6 text-dark">
-          <p><a class="btn" href="">Sobre nosotros</a></p>
-          <p><a class="btn" href="">Contactanos</a></p> 
+          <p><a class="btn text-white" href="./pages/aboutUs.html">Sobre nosotros</a></p>
+          <p><a class="btn text-white" href="./pages/contact.html">Contactanos</a></p>
+          <p class="btn text-light">Duckflix®2023</p> 
         </div>
-      <div class="col-md-6 text-dark">
-        <p><button type="button" class="btn"><img width=25 height=25 src="./assets/imagenes/face-removebg-preview.png" ></button><button type="button" class="btn"><img width=25 height=25 src="./assets/imagenes/insta-removebg-preview.png"></button><button type="button" class="btn"><img width=25 height=25 src="./assets/imagenes/twit.png"></button>
-        <p><a class="btn" href="./pages/404.html">Política de Privacidad | Términos y Condiciones</a></p>
+        <div class="col-md-6 text-dark">
+          <p>
+            <button type="button" class="btn"><a href="./pages/404.html"><i class="bi bi-facebook h1 m-2 text-white"></i></a></button>
+            <button type="button" class="btn"><a href="./pages/404.html"><i class="bi bi-instagram h1 m-2 text-white"></i></a></button>
+            <button type="button" class="btn"><a href="./pages/404.html"><i class="bi bi-twitter h1 m-2 text-white"></i></a></i></button>
+          </p>
+          <p>
+            <a class="btn text-white" href="./pages/404.html">Política de Privacidad | Términos y Condiciones</a>
+          </p>
+        </div>
       </div>
     </div>
-  </div>
   </footer>
+  <script src="./js/app.js"></script>
   <script src="./js/users.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
+
