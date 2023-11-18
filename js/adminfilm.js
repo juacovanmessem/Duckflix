@@ -73,7 +73,6 @@ const publish = async (film) => {
       'Content-type': 'application/json; charset=UTF-8',
     }
   })
-  alert ('hola')
 };
 
 const deleteContent = async (film) => {

@@ -10,19 +10,7 @@
       "image": "https://cdn.forbes.com.mx/2015/10/back_to_the_future.jpg",
       "status": true,
       "id": 1,
-      "spotLight": true
-    },
-    {
-      "title": "El Padrino",
-      "category": "Acción",
-      "sinopsis": "Don Vito Corleone es el respetado y temido jefe de una de las cinco familias de la mafia de Nueva York en los años 40.",
-      "type": "Película",
-      "time": "2h 55min",
-      "year": "1962",
-      "image": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRFnUIGQQtTzUxD9Y19nl3uum8SZA6TSA8eWnJoPy1UdHVF8fDn",
-      "status": false,
-      "id": 2,
-      "spotLight": true
+      "spotLight": false
     },
     {
       "title": "Chau Buenos Aires",
@@ -32,7 +20,7 @@
       "time": "1hs 51min",
       "year": "2023",
       "image": "https://images.mubicdn.net/images/film/370012/cache-852280-1675047738/image-w1280.jpg?size=800x",
-      "status": false,
+      "status": true,
       "spotLight": false,
       "id": 3
     },
@@ -44,7 +32,7 @@
       "time": "6 temporadas",
       "year": "2023",
       "image": "https://occ-0-1366-1740.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABedMOoAOKu1_WjIJmkvT1zPpzM7nzX7LC8Peta6GTjwTUO4aPAySx072iJXfS7ovq2tYlnq5uarEPIH2Et2NQXNItkjf8KFvt_BxigyW061yDS8jjgocm_cdjyM8GD-WoGTjIAamZ8uzcgk7r7klVXC62hzzgoGXK8FH8orZG-OLS6sVmkci.webp?r=713",
-      "status": false,
+      "status": true,
       "spotLight": false,
       "id": 4
     },
@@ -56,7 +44,7 @@
       "time": "1hs 25min",
       "year": "2022",
       "image": "https://occ-0-1366-1740.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABfmkvOEq3F7kQ63mtgOqgp4ZWX6E1s7BkWjGqHRv8fE1TNzDZk5CNQkcM7YwWp-bEQ_ini5TJjppaYukk0vxc84gC8ldftTs3QM.webp?r=6b2",
-      "status": false,
+      "status": true,
       "spotLight": false,
       "id": 5
     },
@@ -68,7 +56,7 @@
       "time": "2hs 38min",
       "year": "2012",
       "image": "https://www.mundodeportivo.com/alfabeta/hero/2021/12/vengadores.1640005155.553.jpg?width=1200&aspect_ratio=16:9",
-      "status": false,
+      "status": true,
       "spotLight": false,
       "id": 6
     },
@@ -80,7 +68,7 @@
       "time": "4 Temporadas",
       "year": "2016",
       "image": "https://occ-0-1366-1740.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABQpnK-uuOe7H7X3RMJKcroyNCybbVqlpkQEBlMZSM0nhbfjXH5QtVXtsUJ1JaWAslHy83WBoWpKciuuoURdF9Ccug19-wV3w-Sghdp4FMz7pwnwewfUwIm5EfLzL9PqT-ApC.jpg?r=ea5",
-      "status": false,
+      "status": true,
       "spotLight": false,
       "id": 7
     },
@@ -92,7 +80,7 @@
       "time": "1hs 52min",
       "year": "2013",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROAqvNIf0iY1ZzyrVsAf8Zge5V6YAYB9m3o83SYW4gyjgYzaqRFSqUe84ZjLgiXlAa_QU&usqp=CAU",
-      "status": false,
+      "status": true,
       "spotLight": false,
       "id": 8
     },
@@ -104,7 +92,7 @@
       "time": "1hs 48min",
       "year": "2016",
       "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/F4C30DD8F018FA9DB65E015CAE10C66FD72BE870F39D780222629A2A1B2EB765/scale?width=1200&aspectRatio=1.78&format=jpeg",
-      "status": false,
+      "status": true,
       "spotLight": false,
       "id": 9
     },
@@ -116,7 +104,7 @@
       "time": "2hs 8min",
       "year": "2016",
       "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/star/56E433A853B36B927FDB034942B977C6890C9FB954AA6F305994CA7559CCAC6F/scale?width=1200&aspectRatio=1.78&format=jpeg",
-      "status": false,
+      "status": true,
       "spotLight": false,
       "id": 10
     },
@@ -128,7 +116,7 @@
       "time": "2hs 26min",
       "year": "1979",
       "image": "https://es.web.img3.acsta.net/pictures/14/04/15/10/46/568345.jpg",
-      "status": false,
+      "status": true,
       "spotLight": false,
       "id": 11
     },
@@ -140,7 +128,7 @@
       "time": "10 temporadas",
       "year": "1994",
       "image": "https://www.eltelegrafo.com.ec/media/k2/items/cache/d53d6938410abec6a9f5e7704258cec4_XL.jpg",
-      "status": false,
+      "status": true,
       "spotLight": false,
       "id": 12
     },
@@ -152,7 +140,7 @@
       "time": "3hs 15min",
       "year": "1997",
       "image": "https://images.ecestaticos.com/12XlMhwAHREXbjZRuXGbnM-OLH4=/1x6:395x584/1440x1920/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2Fdcb%2F36a%2Fe27%2Fdcb36ae2752ae247006ca2ab35c99b43.jpg",
-      "status": false,
+      "status": true,
       "spotLight": false,
       "id": 13
     },
@@ -164,7 +152,7 @@
       "time": "12 Temporadas",
       "year": "2007",
       "image": "https://www.formulatv.com/images/series/posters/100/185/dest_1.jpg",
-      "status": false,
+      "status": true,
       "spotLight": false,
       "id": 14
     },
@@ -176,31 +164,31 @@
       "time": "5 temporadas",
       "year": "2016",
       "image": "https://es.web.img2.acsta.net/pictures/18/11/15/02/49/1477139.jpg",
-      "status": false,
+      "status": true,
       "spotLight": false,
       "id": 15
     },
     {
-      "title": "Inception",
+      "title": "El orígen",
       "category": "Ciencia Ficción",
       "sinopsis": "Un ladrón de sueños se adentra en el subconsciente de las personas para robar secretos.",
       "type": "Película",
       "time": "2hs 28minutos",
       "year": "2010",
       "image": "https://4.bp.blogspot.com/_dAGq_7k2IB8/S_cWJtnAbjI/AAAAAAAABa8/kKVq2-TF-Os/s1600/Inception.jpg",
-      "status": false,
+      "status": true,
       "spotLight": false,
       "id": 16
     },
     {
-      "title": "Gladiator",
+      "title": "Gladiador",
       "category": "Acción",
       "sinopsis": "Un general romano busca venganza en el Coliseo después de ser traicionado.",
       "type": "Película",
       "time": "2hs 35min",
       "year": "2000",
       "image": "https://www.cinemascomics.com/wp-content/uploads/2020/08/Asi-habria-regresado-Maximo-en-Gladiator-2-segun-Russell-Crowe.jpg",
-      "status": false,
+      "status": true,
       "spotLight": false,
       "id": 17
     },
@@ -212,19 +200,19 @@
       "time": "3 temporadas",
       "year": "2019",
       "image": "https://www.lavanguardia.com/andro4all/hero/2023/03/scale.jpeg?width=768&aspect_ratio=16:9&format=nowebp",
-      "status": false,
+      "status": true,
       "spotLight": false,
       "id": 18
     },
     {
-      "title": "The Conjuring 2",
+      "title": "El Conjuro 2",
       "category": "Terror",
       "sinopsis": " Investigadores paranormales viajan a Londres para ayudar a una familia atormentada por entidades malignas.",
       "type": "Película",
       "time": "2hs 14min",
       "year": "2016",
       "image": "https://www.laizquierdadiario.com/IMG/arton44189.jpg?1467944059",
-      "status": false,
+      "status": true,
       "spotLight": false,
       "id": 19
     },
@@ -236,7 +224,7 @@
       "time": "2hs 22min",
       "year": "1995",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtiVXTObB9YY1DvoKa0-ggH5A2u4WayUv13Q&usqp=CAU",
-      "status": false,
+      "status": true,
       "spotLight": false,
       "id": 20
     },
@@ -248,7 +236,7 @@
       "time": "11 temporadas",
       "year": "2010",
       "image": "https://www.latercera.com/resizer/fCTfH_Tu7qMKLW5B-QdgiU6R_WY=/900x600/smart/arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/TWXTDENQTJCNZJGMTEB6PGLZA4.jpg",
-      "status": false,
+      "status": true,
       "spotLight": false,
       "id": 21
     },
@@ -260,7 +248,7 @@
       "time": "1 temporada",
       "year": "2019",
       "image": "https://imgmedia.larepublica.pe/640x371/larepublica/original/2020/07/07/61a6ccb11f9d5818374911dd.webp",
-      "status": false,
+      "status": true,
       "spotLight": false,
       "id": 22
     },
@@ -272,7 +260,7 @@
       "time": "2hs 36min",
       "year": "2015",
       "image": "https://hips.hearstapps.com/hmg-prod/images/el-renacido-2015-con-leonardo-dicaprio-diez-minutos-1606428013.jpg",
-      "status": false,
+      "status": true,
       "spotLight": false,
       "id": 23
     },
@@ -284,7 +272,7 @@
       "time": "1hs 32min",
       "year": "2015",
       "image": "https://production-gameflipusercontent.fingershock.com/us-east-1:a3964cec-0dc4-4fa9-bee2-0c367270d521/e9be191f-0977-4da9-a639-d0223af11c88/5fd0dccb-e002-403d-af54-1cd99c0f66d4",
-      "status": false,
+      "status": true,
       "spotLight": false,
       "id": 24
     },
@@ -296,7 +284,7 @@
       "time": "1hs 40min",
       "year": "2014",
       "image": "https://hips.hearstapps.com/hmg-prod/images/gran-hotel-budapest-cartel-1513779850.jpg?crop=0.8xw:1xh;center,top&resize=1200:*",
-      "status": false,
+      "status": true,
       "spotLight": false,
       "id": 25
     },
@@ -308,7 +296,7 @@
       "time": "9 temporadas",
       "year": "2005",
       "image": "https://www.publimetro.cl/resizer/sGLMFXh5jQzt6gJFAG6_PWuKo9I=/800x0/filters:format(png):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/metroworldnews/CQBIOWSLBVBVXF2X3XHKAALQTQ.png",
-      "status": false,
+      "status": true,
       "spotLight": false,
       "id": 26
     },
@@ -320,7 +308,7 @@
       "time": "7 temporadas",
       "year": "2006",
       "image": "https://m.media-amazon.com/images/S/pv-target-images/09db3779d9f3e5f7fa083201a1f2be46fbe7fb4add60a984456851979ab1cd2b.jpg",
-      "status": false,
+      "status": true,
       "spotLight": false,
       "id": 27
     },
@@ -332,19 +320,19 @@
       "time": "1hs 57min",
       "year": "1998",
       "image": "https://3.bp.blogspot.com/-JNi0XfTuQqw/WufjPhR8luI/AAAAAAAAHGs/nD_HQ_t3kDEKUPJyKA2bupKAwke3G6yLQCLcBGAs/s1600/el-gran-lebowski-comedia-humor-absurdo.jpg",
-      "status": false,
+      "status": true,
       "spotLight": false,
       "id": 28
     },
     {
-      "title": "Bridesmaids",
+      "title": "Damas en guerra",
       "category": "Comedia",
       "sinopsis": "Una dama de honor compite con otras amigas para impresionar a la novia en esta divertida comedia sobre bodas.",
       "type": "Película",
       "time": "2hs 5min",
       "year": "2010",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxgEi-2PsGiAXp3suc27Keq-1UJaVKyrtcpw&usqp=CAU",
-      "status": false,
+      "status": true,
       "spotLight": false,
       "id": 29
     },
@@ -356,7 +344,7 @@
       "time": "8 temporadas",
       "year": "2013",
       "image": "https://1.bp.blogspot.com/-X3n6HaUQamE/WSrS4zn28zI/AAAAAAAAF6A/1fbghUy9SGgY3yTW_UssedAftmOP5jTHACLcB/s1600/brooklyn-nine-nine-poster.jpg",
-      "status": false,
+      "status": true,
       "spotLight": false,
       "id": 30
     },
@@ -368,19 +356,19 @@
       "time": "2hs",
       "year": "2014",
       "image": "https://i0.wp.com/www.generacionfriki.es/wp-content/uploads/2016/01/MAD-MAX-FURIA-EN-LA-CARRETERA-PORTADA.jpg?resize=618%2C307&ssl=1",
-      "status": false,
+      "status": true,
       "spotLight": false,
       "id": 31
     },
     {
-      "title": "The Dark Knight",
+      "title": "Batman: el caballero de la noche",
       "category": "Acción",
       "sinopsis": "\tBatman lucha contra el Joker para salvar Gotham City.",
       "type": "Película",
       "time": "2hs 32min",
       "year": "2007",
       "image": "https://larepublica.cronosmedia.glr.pe/migration/images/TLBIGOIGTFGCBIU4TECGW7KOLA.jpg",
-      "status": false,
+      "status": true,
       "spotLight": false,
       "id": 32
     },
@@ -392,19 +380,19 @@
       "time": "1hs 41min",
       "year": "2014",
       "image": "https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2018/01/John-Wick.jpg?fit=2560%2C1440&quality=50&strip=all&ssl=1",
-      "status": false,
-      "spotLight": false,
+      "status": true,
+      "spotLight": true,
       "id": 33
     },
     {
-      "title": "Mission: Impossible",
+      "title": "Misión: Imposible",
       "category": "Acción",
       "sinopsis": "El agente Ethan Hunt lidera misiones imposibles para desbaratar complots terroristas. La serie sigue a Hunt y su equipo en aventuras repletas de acción y tecnología avanzada.",
       "type": "Serie",
       "time": "7 temporadas",
       "year": "1988",
       "image": "https://i.ytimg.com/vi/joXwW6LJKx4/maxresdefault.jpg",
-      "status": false,
+      "status": true,
       "spotLight": false,
       "id": 34
     },
@@ -416,7 +404,7 @@
       "time": "2hs",
       "year": "2002",
       "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/star/CC096BBBDAA16CE22B637A6CC5933A869E57D245482E1A0D042719277366C90B/scale?width=1200&aspectRatio=1.78&format=jpeg",
-      "status": false,
+      "status": true,
       "spotLight": false,
       "id": 35
     },
@@ -428,7 +416,7 @@
       "time": "1hs 15min",
       "year": "2020",
       "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/star/1A24CBB25BB6CC9E42B85C97A36B589693BDA0F764489CD3FBCCDB122DB9A867/scale?width=1200&aspectRatio=1.78&format=jpeg",
-      "status": false,
+      "status": true,
       "spotLight": false,
       "id": 36
     },
@@ -440,11 +428,10 @@
       "time": "2hs 2o min",
       "year": "2016",
       "image": "https://cartelescine.files.wordpress.com/2018/04/promesa-al-amanecer.jpg",
-      "status": false,
+      "status": true,
       "spotLight": false,
       "id": 37
     },
-
     {
       "title": "Bajo las Estrellas",
       "category": "Romance",
@@ -453,7 +440,7 @@
       "time": "2hs 5min",
       "year": "2015",
       "image": "https://cdn.sincroguia.tv/uploads/programs/b/a/j/bajo-las-estrellas-137940_SPA-28.jpg",
-      "status": false,
+      "status": true,
       "spotLight": false,
       "id": 38
     },
@@ -465,7 +452,7 @@
       "time": "5 temporadas",
       "year": "2011",
       "image": "https://www.tonica.la/__export/1591215792901/sites/debate/img/2020/06/03/black_mirror_publicidad.jpg_554688468.jpg",
-      "status": false,
+      "status": true,
       "spotLight": false,
       "id": 39
     },
@@ -477,7 +464,7 @@
       "time": "33 temporadas",
       "year": "1989",
       "image": "https://sm.ign.com/ign_es/news/t/the-simpso/the-simpsons-season-34-will-reveal-how-the-show-has-managed_hh4b.jpg",
-      "status": false,
+      "status": true,
       "spotLight": false,
       "id": 40
     },
@@ -489,10 +476,9 @@
       "time": "8 tamporadas",
       "year": "2010",
       "image": "https://sigueenserie.files.wordpress.com/2019/03/juego-de-tronos-la-c39altima-guardia.jpg",
-      "status": false,
+      "status": true,
       "spotLight": false,
       "id": 41
     }
   ]
-
 }
