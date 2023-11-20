@@ -13,7 +13,7 @@
   <header>
     <nav class="navbar navbar-expand-lg ">
       <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html"><img height="40" src="../assets/imagenes/logo.png" alt=""><img height="40" src="../assets/imagenes/Duckflix.png" alt=""></a>
+        <a class="navbar-brand" href="#"><img height="40" src="../assets/imagenes/logo.png" alt=""><img height="40" src="../assets/imagenes/Duckflix.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -32,11 +32,11 @@
                 Categorías
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Acción</a></li>
-                <li><a class="dropdown-item" href="#">Terror</a></li>
-                <li><a class="dropdown-item" href="#">Comedia</a></li>
-                <li><a class="dropdown-item" href="#">Románticas</a></li>
-                <li><a class="dropdown-item" href="#">Ciencias ficción</a></li>
+                <li><a class="dropdown-item" href="#actionContent">Acción</a></li>
+                <li><a class="dropdown-item" href="#horrorContent">Terror</a></li>
+                <li><a class="dropdown-item" href="#comediContent">Comedia</a></li>
+                <li><a class="dropdown-item" href="#romanceContent">Románticas</a></li>
+                <li><a class="dropdown-item" href="#cifiContent">Ciencias ficción</a></li>
               </ul>
             </li>
             <li>
@@ -66,7 +66,7 @@
                         <input type="password" class="form-control" id="passwordLogin" value="" required>
                       </div>
                       <div class="align-items-center ">  
-                        <a class="d-flex justify-content-end" href="./pages/password.html">Modificar mi contraseña</a>
+                        <a class="d-flex justify-content-end" href="../pages/password.html">Modificar mi contraseña</a>
                         <button type="button" class="btn btn-primary d-flex justify-content-start" onclick="loginUser()">Ingresar</button>
                       </div>
                     </form>
@@ -104,7 +104,7 @@
                           <label for="password" class="form-label">Contraseña</label>
                           <input type="password" class="form-control" id="password" value="" required>
                         </div>
-                          <button type="button" class="btn btn-primary" onclick="createUser()">Registrarse</button>
+                          <button type="submit" class="btn btn-primary" onclick="createUser()">Registrarse</button>
                         </div>
                       </div>
                     </form>
@@ -121,27 +121,34 @@
     </nav>
   </header>
   <main>
+    <div class="container-md row height m-5 p-4" id="info">
 
+    </div>
   </main>
+
   <footer class="text-light py-4" >
     <div class="container">
-      <div class="row">
-        <div class="col-md-6 text-dark">
-          <p><a class="btn text-white" href="./aboutUs.html">Sobre nosotros</a></p>
-          <p><a class="btn text-white" href="./contact.html">Contactanos</a></p> 
-          <p class="btn text-light">Duckflix®2023</p> 
-        </div>
+    <div class="row">
+      <div class="col-md-6 text-dark">
+        <p><a class="btn text-white" href="../pages/aboutUs.html">Sobre nosotros</a></p>
+        <p><a class="btn text-white" href="../pages/contact.html">Contactanos</a></p>
+        <p class="btn text-light">Duckflix®2023</p> 
+      </div>
       <div class="col-md-6 text-dark">
         <p>
-          <button type="button" class="btn"><a href="./404.html"><i class="bi bi-facebook h1 m-2 text-white"></i></a></button>
-          <button type="button" class="btn"><a href="./404.html"><i class="bi bi-instagram h1 m-2 text-white"></i></a></button>
-          <button type="button" class="btn"><a href="./404.html"><i class="bi bi-twitter h1 m-2 text-white"></i></a></i></button>
+          <button type="button" class="btn"><a href="../pages/404.html"><i class="bi bi-facebook h1 m-2 text-white"></i></a></button>
+          <button type="button" class="btn"><a href="../pages/404.html"><i class="bi bi-instagram h1 m-2 text-white"></i></a></button>
+          <button type="button" class="btn"><a href="../pages/404.html"><i class="bi bi-twitter h1 m-2 text-white"></i></a></i></button>
+        </p>
         <p>
-          <a class="btn text-white" href="./pages/404.html">Política de Privacidad | Términos y Condiciones</a></p>
+          <a class="btn text-white" href="./pages/404.html">Política de Privacidad | Términos y Condiciones</a>
+        </p>
       </div>
     </div>
   </div>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</footer>
+<script src="../js/aboutFilm.js"></script>
+<script src="../js/users.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
