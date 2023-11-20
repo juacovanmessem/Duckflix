@@ -1,3 +1,9 @@
+const logOut = () => {
+  localStorage.removeItem('role');
+  localStorage.removeItem('id');
+  window.location.href = '../pages/login.html';
+}
+
 function enviarMail() {
   let usuario = document.getElementById("usuario").value
   let mail = document.getElementById("mail").value

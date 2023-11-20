@@ -1,3 +1,8 @@
+const logOut = () => {
+  localStorage.removeItem('role');
+  localStorage.removeItem('id');
+  window.location.href = '../pages/login.html';
+}
 
 const aboutFilm = async () => {
     let contentTitle = localStorage.getItem ('title') 
