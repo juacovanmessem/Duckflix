@@ -1,5 +1,9 @@
-.pullhigh{
-  height: 100%;
-  min-height: 100vh;
-
+.navbar{
+  background-color:#26798E
+}
+footer{
+  background-color:#26798E
+}
+main{
+  height: 59.8vh;
 }

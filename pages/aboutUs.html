@@ -3,104 +3,157 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <title>Document</title>
+  <link href="../styles/aboutUs.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../assets/imagenes/iconow.png">
+  <title>Duckflix</title>
 </head>
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-expand-lg ">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Logo</a>
+        <a class="navbar-brand" href="../index.html"><img height="40" src="../assets/imagenes/logo.png" alt=""><img height="40" src="../assets/imagenes/Duckflix.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+              <a class="nav-link active text-white" aria-current="page" href="../index.html">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">series</a>
+              <a class="nav-link text-white" href="#">Series</a>
             </li><li class="nav-item">
-              <a class="nav-link" href="#">Peliculas</a>
+              <a class="nav-link text-white" href="#">Películas</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Categorias
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Categorías
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Acción</a></li>
                 <li><a class="dropdown-item" href="#">Terror</a></li>
                 <li><a class="dropdown-item" href="#">Comedia</a></li>
-                <li><a class="dropdown-item" href="#">Romanticas</a></li>
+                <li><a class="dropdown-item" href="#">Románticas</a></li>
+                <li><a class="dropdown-item" href="#">Ciencias ficción</a></li>
               </ul>
             </li>
             <li>
               <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Busqueda" aria-label="Search">
-                <button type="button" class="btn btn-light"><img width=20 height=20 src="./assets/imagenes/Lupa-removebg-preview.png"></button>
+                <button type="button" class="btn btn-light"><img width=20 height=20 src="../assets/imagenes/Lupa-removebg-preview.png"></button>
               </form>
             </li>
           </ul>
           <ul>
-              <button class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Registrase</button>
-              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      ...
-                    </div>
+            <button class="btn text-white" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar sesión</button>
+            <div class="modal fade" id="modalLogin" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Iniciar sesión</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="emailLogin" class="form-label">Correo electrónico</label>
+                        <input type="email" class="form-control" id="emailLogin" aria-describedby="emailHelp" value="" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="passwordLogin" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="passwordLogin" value="" required>
+                      </div>
+                      <div class="align-items-center ">  
+                        <a class="d-flex justify-content-end" href="./pages/password.html">Modificar mi contraseña</a>
+                        <button type="button" class="btn btn-primary d-flex justify-content-start" onclick="loginUser()">Ingresar</button>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="btn text-white" data-bs-toggle="modal" data-bs-target="#modalRegister">Registrarse</button>
+            <div class="modal fade" id="modalRegister" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Registrarse</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <div class="mb-3">
+                          <label for="name" class="form-label">Nombre/s</label>
+                          <input type="text" class="form-control" id="name" value="" required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="lastname" class="form-label">Apellido</label>
+                          <input type="text" class="form-control" id="lastname" value="" required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="email" class="form-label">Correo Electrónico</label>
+                          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" value="" required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="password" class="form-label">Contraseña</label>
+                          <input type="password" class="form-control" id="password" value="" required>
+                        </div>
+                          <button type="button" class="btn btn-primary" onclick="createUser()">Registrarse</button>
+                        </div>
+                      </div>
+                    </form>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Understood</button>
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                     </div>
                   </div>
                 </div>
               </div>
-              <button class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Iniciar Secion</button>
-              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      ...
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Understood</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            </div>
           </ul>
         </div>
       </div>
     </nav>
   </header>
   <main>
-
-  </main>
-  <footer>
-    <footer class="bg-light text-light py-4">
-      <div class="container">
-          <div class="row">
-              <div class="col-md-6 text-dark">
-                  <p><a class="btn btn-light" href="">Sobre nosotros</a></p>
-                  <p><a class="btn btn-light" href="">Contactanos</a></p> 
-              </div>
-              <div class="col-md-6 text-dark">
-                  <p><button type="button" class="btn"><img width=25 height=25 src="./assets/imagenes/face-removebg-preview.png" ></button><button type="button" class="btn"><img width=25 height=25 src="./assets/imagenes/insta-removebg-preview.png"></button><button type="button" class="btn"><img width=25 height=25 src="./assets/imagenes/twit.png"></button>
-                  <p><a class="btn btn-light" href="./pages/404.html">Política de Privacidad | Términos y Condiciones</a></p>
-              </div>
-          </div>
+    <div class="d-flex justify-content-center">
+      <img src="../assets/imagenes/DuckFlix-aboutUs.png" class="imagen  bg-transparent " alt="DuckFlix aboutUs" >
+    </div>
+    <div class="container-md bg-warning-subtle my-4 rounded-4 mt-2">
+      <div class="p-3 display-6">
+        <p>Las historias nos conmueven. Despiertan emociones, muestran nuevas perspectivas y nos acercan los unos a los otros.
+        </p>
       </div>
+      <div class="border border-info border-2 opacity-50"></div>
+      <div class="p-3 lead">
+        <p>En DuckFlix, queremos entretener al mundo. Más allá de tus gustos y del lugar donde vivas, te damos acceso a series, documentales, películas y juegos móviles de primer nivel. Nuestros miembros controlan qué quieren ver y cuándo quieren verlo con una simple membresía. Ofrecemos contenido por streaming en más de 30 idiomas y a más de 190 países, porque las grandes historias pueden venir de cualquier lugar y cautivar al público de todas partes. Nada nos apasiona más que el entretenimiento, y queremos estar ahí siempre para ayudarte a encontrar tu próxima historia favorita.
+        </p>
+      </div>
+    </div>
+  </main>
+  <footer class="text-light py-4" >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-dark">
+          <p><a class="btn text-white" href="./aboutUs.html">Sobre nosotros</a></p>
+          <p><a class="btn text-white" href="./contact.html">Contactanos</a></p> 
+          <p class="btn text-light">Duckflix®2023</p> 
+        </div>
+      <div class="col-md-6 text-dark">
+        <p>
+          <button type="button" class="btn"><a href="./404.html"><i class="bi bi-facebook h1 m-2 text-white"></i></a></button>
+          <button type="button" class="btn"><a href="./404.html"><i class="bi bi-instagram h1 m-2 text-white"></i></a></button>
+          <button type="button" class="btn"><a href="./404.html"><i class="bi bi-twitter h1 m-2 text-white"></i></a></i></button>
+        <p>
+          <a class="btn text-white" href="./pages/404.html">Política de Privacidad | Términos y Condiciones</a></p>
+      </div>
+    </div>
+  </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
