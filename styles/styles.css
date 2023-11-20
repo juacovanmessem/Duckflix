@@ -15,6 +15,7 @@ footer{
 }
 .content {
   width: 17%;
+  height: 150px;
   background-color: #FFE3B3;
 }
 .hover p{
@@ -28,6 +29,7 @@ footer{
 }
 .hover:hover img{
   width: 20%;
+  height: 175px;
   box-shadow: #26798E .3rem .3rem;
   transition: 1.5s;
   background-color: #FFC172;
