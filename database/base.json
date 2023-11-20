@@ -10,7 +10,7 @@
     },
     {
       "email": "lauty36@gmail.com",
-      "password": "lautaro2023",
+      "password": "hola2023",
       "role": "admin",
       "id": 2
     },
@@ -109,6 +109,38 @@
       "password": "luciano123",
       "role": "client",
       "id": 14
+    },
+    {
+      "name": "Antonio",
+      "lastname": "Brahim",
+      "email": "antonio@gmail.com",
+      "password": "antonio123",
+      "role": "client",
+      "id": 15
+    },
+    {
+      "name": "jorge",
+      "lastname": "perez",
+      "email": "perezjorge@gmail.com",
+      "password": "jorge2023",
+      "role": "client",
+      "id": 16
+    },
+    {
+      "name": "jorge",
+      "lastname": "perez",
+      "email": "jorge@gmail.com",
+      "password": "jorge2023",
+      "role": "client",
+      "id": 17
+    },
+    {
+      "name": "carlos",
+      "lastname": "bravo",
+      "email": "carlos@gmail.com",
+      "password": "carlos2023",
+      "role": "client",
+      "id": 18
     }
   ]
 }
