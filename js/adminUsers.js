@@ -1,94 +1,57 @@
-function mostrarUsuarios() {
-  const usuarios = [
-    { id: 1, nombre: 'Usuario1', email: 'usuario1@example.com', rol: 'Admin' },
-    { id: 2, nombre: 'Usuario2', email: 'usuario2@example.com', rol: 'Usuario' },
-    { id: 3, nombre: 'Usuario3', email: 'usuario3@example.com', rol: 'Usuario' }
-    // Puedes agregar más usuarios según sea necesario
-  ];
+const showTable=async ()=> {
 
-  const cuerpoTablaUsuarios = document.getElementById('cuerpoTablaUsuarios');
 
-  // Limpiar la tabla antes de mostrar nuevos usuarios
-  cuerpoTablaUsuarios.innerHTML = '';
+  let result = await fetch ('http://localhost:3000/users')
+  let content = await result.json ()
+  let tbody = document.getElementById("cuerpoTablaUsuarios")
+  let tr = document.createElement ('tr')
+  content.forEach (user =>{
+    tr.innerHTML = `<th scope="row" id=${user.id}>${user.id}</th>
+    <td>${user.name}</td>
+    <td>${user.email}</td>
+    <td>${user.role}</td>
+    <td><button type="button" class="btn btn-link link-dark" onclick="deleteUser(this)" id=${user.id}><i class="bi bi-trash3-fill"></i></button><button type="button" class="btn btn-link link-dark" onclick="edit(this)" id=${user.id}><i class="bi bi-pencil-fill"></i></td>`
+    tbody.insertBefore (tr, tbody.children [0])
+    console.log(user.id)
+  })
+}
 
-  // Mostrar cada usuario en la tabla
-  usuarios.forEach(usuario => {
-    const fila = `
-      <tr>
-        <td>${usuario.id}</td>
-        <td>${usuario.nombre}</td>
-        <td>${usuario.email}</td>
-        <td>${usuario.rol}</td>
-        <td>
-          <button class="btn btn-light" onclick="editarUsuario(${usuario.id})"><i class="bi bi-pencil-fill"></i></button>
-          <button class="btn btn-light" onclick="eliminarUsuario(${usuario.id})"><i class="bi bi-trash3-fill"></i></button>
-        </td>
-      </tr>
-    `;
-    cuerpoTablaUsuarios.innerHTML += fila;
+const deleteUser= async (user) => { 
+  let result = await fetch ('http://localhost:3000/users')
+  let content = await result.json ()
+  let idLine = content.find (para => para.id == user.id)
+  let id = idLine.id
+    
+  await fetch (`http://localhost:3000/users/${id}`, {
+    method: 'DELETE',
   });
 }
 
-function editarUsuario(id) {
-  // Supongamos que tienes una función para obtener los datos del usuario desde tu backend
-  obtenerDatosUsuario(id)
-    .then(usuario => {
-      if (usuario) {
-        // Cargar los datos del usuario en los campos del modal de edición
-        document.getElementById('editNombre').value = usuario.nombre;
-        document.getElementById('editEmail').value = usuario.email;
-        document.getElementById('editRol').value = usuario.rol;
+const editRoleUser = async (user) => {
+  let result = await fetch ('http://localhost:3000/users')
+  let content = await result.json ()
+  let object = content.find (para => para.id == user.id)
 
-        // Mostrar el modal de edición
-        const modalEditarUsuario = new bootstrap.Modal(document.getElementById('modalEditarUsuario'));
-        modalEditarUsuario.show();
-      } else {
-        alert('Usuario no encontrado'); // Manejo de caso en que el usuario no se encuentre
+  if (object.role == admin) {
+    await fetch (`http://localhost:3000/users/${object.id}`,{
+    method: 'PATCH',
+    body: JSON.stringify({
+      role:"client"
+    }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    }
+  })
+  } else{
+    await fetch (`http://localhost:3000/users/${object.id}`,{
+      method: 'PATCH',
+      body: JSON.stringify({
+        role:"admin"
+      }),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
       }
     })
-    .catch(error => {
-      console.error('Error al obtener los datos del usuario', error);
-      alert('Error al obtener los datos del usuario');
-    });
-}
-
-// Función para obtener los datos del usuario desde el backend
-function obtenerDatosUsuario(id) {
-  // Esta es una simulación de una solicitud asíncrona
-  return new Promise((resolve, reject) => {
-    // Supongamos que obtienes los datos del usuario a través de una API o una función asíncrona
-    // Aquí puedes simular la obtención de los datos del usuario, como una solicitud fetch a tu servidor
-    setTimeout(() => {
-      const usuarios = [
-        { id: 1, nombre: 'Usuario1', email: 'usuario1@example.com', rol: 'Admin' },
-        { id: 2, nombre: 'Usuario2', email: 'usuario2@example.com', rol: 'Usuario' },
-        { id: 3, nombre: 'Usuario3', email: 'usuario3@example.com', rol: 'Usuario' }
-        // ... más usuarios
-      ];
-
-      const usuarioEncontrado = usuarios.find(usuario => usuario.id === id);
-      resolve(usuarioEncontrado); // Devolver el usuario encontrado
-    }, 1000); // Simulando una solicitud asíncrona con un retardo de 1 segundo (simulación de red)
-  });
-}
-
-function eliminarUsuario(id) {
-// Mostrar el modal de confirmación de eliminación
-  const modalEliminarUsuario = new bootstrap.Modal(document.getElementById('confirmarEliminarUsuario'));
-  modalEliminarUsuario.show();
-
-// Guardar el ID del usuario a eliminar en un atributo data- del botón de confirmación
-  const botonConfirmarEliminar = document.querySelector('#confirmarEliminarUsuario .btn-danger');
-  botonConfirmarEliminar.dataset.userId = id;
-}
-
-function eliminarUsuarioConfirmado() {
-// Obtener el ID del usuario a eliminar desde el botón de confirmación
-  const botonConfirmarEliminar = document.querySelector('#confirmarEliminarUsuario .btn-danger');
-  const userId = botonConfirmarEliminar.dataset.userId;
-  const modalEliminarUsuario = new bootstrap.Modal(document.getElementById('confirmarEliminarUsuario'));
-  modalEliminarUsuario.hide();
-
-// Ejemplo de acción a realizar después de la eliminación
-  alert(`Usuario con ID ${userId} eliminado`);
-}
+  }
+  alert("Rol modificado con exito")
+};
