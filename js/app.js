@@ -9,7 +9,7 @@ const spotLightContent = async () => {
   let div = document.getElementById ('spotLight')
   div.innerHTML = `<div class="carousel-inner">
   <div class="carousel-item active" data-bs-interval="10000">
-  <img src=${findSpotLight.image} class="d-block img-fluid spotLight" alt="...">
+  <img src=${findSpotLight.image} class="d-block img-fluid spotLight" alt="${findSpotLight.title}">
   <div class="carousel-caption d-none d-md-block bgGradient">
   <h5 class="text-light display-4 text-uppercase">${findSpotLight.title}</h5>
   <p class="text-light">${findSpotLight.sinopsis}</p>
@@ -85,12 +85,14 @@ const contentSerie = async () => {
   divContent.innerHTML='<h3 class="display-6 text-uppercase">Todas las series</h3>'
   content.forEach (element => {
     if (element.type == 'Serie') {
-      divContent.innerHTML += 
-      `<div class="position-relative  d-inline hover">
-        <p class="position-absolute top-50 start-50 translate-middle w-100 p-2 d-inline-block">${element.title}</p>
-        <img src=${element.image} class="img-fluid img-thumbnail rounded content m-1 my-2" alt="${element.title}"></img>
-      </div>`
-    } 
+      if (element.status == true) {
+        divContent.innerHTML += 
+        `<div class="position-relative d-inline hover">
+          <p class="position-absolute top-50 start-50 translate-middle w-100 p-2 d-inline-block">${element.title}</p>
+          <img src=${element.image} class="img-fluid img-thumbnail rounded content m-1 my-2" alt="${element.title}"></img>
+        </div>`
+      } 
+    }
   })
 };
 
@@ -101,11 +103,15 @@ const contentMovie = async () => {
   divContent.innerHTML='<h3 class="display-6 text-uppercase">Todas las películas</h3>'
   content.forEach (element => {
     if (element.type == 'Película') {
-      divContent.innerHTML += 
-      `<div class="position-relative  d-inline hover text-center">
-        <p class="position-absolute top-50 start-50 translate-middle w-100 p-2 d-inline-block">${element.title}</p>
-        <img src=${element.image} class="img-fluid img-thumbnail rounded content m-1 my-2" alt="${element.title}"></img>
-      </div>`
+      if (element.status == true) {
+        divContent.innerHTML += 
+        `<div class="d-inline m-2">
+          <a class="position-relative  d-inline hover text-center" href="./pages/aboutFilm">
+            <p class="position-absolute top-50 start-50 translate-middle w-100 p-2 d-inline-block">${element.title}</p>
+            <img src=${element.image} class="img-fluid img-thumbnail rounded content m-1 my-2" alt="${element.title}"></img>
+          </a>
+        </div>`
+      }
     } 
   })
 };

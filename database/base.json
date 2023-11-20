@@ -31,11 +31,11 @@
       "id": 4
     },
     {
-      "name": "",
-      "lastname": "",
-      "email": "",
-      "password": "",
-      "role": "client",
+      "name": "joaquin",
+      "lastname": "van messem",
+      "email": "vanmessemjoaquin@gmail.com",
+      "password": "juaco1234",
+      "role": "admin",
       "id": 5
     },
     {

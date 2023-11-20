@@ -1,5 +1,4 @@
 
-
 const createUser = () => {
   const name = document.getElementById("name").value;
   const lastname = document.getElementById("lastname").value;
@@ -19,11 +18,9 @@ const createUser = () => {
       'Content-type' : 'application/json; charset=UTF-8',
     }
   })
-  /*userInfo();
-  descripcionusuario();*/
   window.location.href = '../../index.html';
   alert("Usuario creado");
-}
+};
 
 
 const loginUser = async () => {
@@ -38,21 +35,33 @@ const loginUser = async () => {
     alert("Los datos ingresados son incorrectos");
   }
   if(user.password === password){
+    localStorage.setItem("id", user.id);
     localStorage.setItem("role", user.role);
-    window.location.href = '../pages/adminFilm.html';
+
+    if (user.role == 'admin') {
+      window.location.href = '../pages/adminFilm.html';
+    } else {
+      window.location.href = '../../index.html';
+    }
 
     alert("Ingreso Exitoso");
-    window.location.href = '../../index.html';
   }else{
     alert("Constraseña incorrecta");
   }
 };
 
-function obtenerNombreYsaludar() {
+const showUser = async () => {
 
-  var nombre = document.getElementById("name").value; 
-}
+  let name = document.getElementById("userName"); 
+  let id = localStorage.getItem ('id');
 
+  const result = await fetch(`http://localhost:3000/users`);
+  const info = await result.json();
+  const userFind = info.find (e => e.id == id)
+
+  name.innerHTML = `<span class="nav-link active text-white"> Hola ${userFind.name}!</span>`
+};
+showUser()
 
 const changePassword = async () => {
   const email = document.getElementById('emailRecovery').value;
@@ -87,7 +96,7 @@ const changePassword = async () => {
   }else{
     alert('Email/usuario incorrectos')
   } 
-}
+};
 
 const lostPassword = async () => {
   const email = document.getElementById('emailRecovery').value;
@@ -121,31 +130,29 @@ const lostPassword = async () => {
   } else if(!user){
     alert("Los datos ingresados son incorrectos");
   }
-}
+};
 
 const logOut = () => {
   localStorage.removeItem('role');
+  localStorage.removeItem('id');
   window.location.href = '../pages/login.html'
-}
+};
 
+const adminButton = async () => {
+  let div = document.getElementById("adminButton"); 
+  let role = localStorage.getItem ('role');
 
-/*
-const userInfo = async () => {
-  const id = localStorage.getItem("name")
-  const result = await fetch(`http://localhost:3000/users/${id}`);
-  const info = await result.json();
-  return info ;
-}
+  if (role == 'admin') {
+    div.innerHTML = `<a class="nav-link active text-white" href="../../pages/adminFilm.html">Ver tabla de contenido</a>
+    `
+  }
+};
+adminButton()
 
-
-const descripcionusuario = async () => {
-  const usuario = await userInfo();
-  const text = document.getElementById("nombreusuario");
-  const nombreusuario = (`
-  <p>Hola ${usuario.name}!</p>
-  `)
-  text.innerHTML = nombreusuario;
-}
-
- descripcionusuario();
- userInfo(); */
+const checkLogIn = () => {
+  let id = localStorage.getItem ('id');
+  if (!id) {
+    window.location.href = '../pages/login.html'
+  }
+};
+checkLogIn()
