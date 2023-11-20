@@ -7,6 +7,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link href="./styles/styles.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="./assets/imagenes/iconow.png">
   <title>Duckflix</title>
 </head>
 <body>
@@ -52,8 +53,10 @@
               </form>
             </li>
           </ul>
-          <button type="button" class="btn btn-primary" onclick="logOut()">Cerrar Sesion</button>
-          
+
+          <div id="userName" class="m-3"></div>
+          <div id="adminButton" class="m-3"></div>
+          <button type="button" class="btn btn-primary" onclick="logOut()">Cerrar Sesión</button>
         </div>
       </div>
     </nav>
@@ -98,12 +101,16 @@
       </div>
     </section>
   </main>
+  <script src="./js/aboutFilm.js"></script>
+<script>
+  fetchMovies();
+</script>
   <footer class="text-light py-4" >
     <div class="container">
       <div class="row">
         <div class="col-md-6 text-dark">
           <p><a class="btn text-white" href="./pages/aboutUs.html">Sobre nosotros</a></p>
-          <p><a class="btn text-white" href="./pages/contact.html">Contactanos</a></p>
+          <p><a class="btn text-white" href="./pages/contact.html">Contáctanos</a></p>
           <p class="btn text-light">Duckflix®2023</p> 
         </div>
         <div class="col-md-6 text-dark">
@@ -119,6 +126,8 @@
       </div>
     </div>
   </footer>
+  <script src="./js/aboutFilm.js"></script>
+
   <script src="./js/app.js"></script>
   <script src="./js/users.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

@@ -9,7 +9,7 @@ const spotLightContent = async () => {
   let div = document.getElementById ('spotLight')
   div.innerHTML = `<div class="carousel-inner">
   <div class="carousel-item active" data-bs-interval="10000">
-  <img src=${findSpotLight.image} class="d-block img-fluid spotLight" alt="...">
+  <img src=${findSpotLight.image} class="d-block img-fluid spotLight" alt="${findSpotLight.title}">
   <div class="carousel-caption d-none d-md-block bgGradient">
   <h5 class="text-light display-4 text-uppercase">${findSpotLight.title}</h5>
   <p class="text-light">${findSpotLight.sinopsis}</p>
@@ -41,31 +41,31 @@ const categoryContent = async () => {
     if (element.status == true) {
       switch (element.category) {
         case 'Acción': 
-        actionDiv.innerHTML += `<div class="position-relative  d-inline hover">
+        actionDiv.innerHTML += `<div class="position-relative  d-inline hover"  id=${element.id} onclick="aboutThisFilm(this)">
         <p class="position-absolute top-50 start-50 translate-middle w-100 p-2 d-inline-block">${element.title}</p>
         <img src=${element.image} class="img-fluid img-thumbnail rounded content m-1 my-2" alt="${element.title}"></img>
         </div>`
         break;
         case 'Ciencia Ficción': 
-        cifiDiv.innerHTML += `<div class="position-relative  d-inline hover">
+        cifiDiv.innerHTML += `<div class="position-relative  d-inline hover"  id=${element.id} onclick="aboutThisFilm(this)">
         <p class="position-absolute top-50 start-50 translate-middle w-100 p-2 d-inline-block">${element.title}</p>
         <img src=${element.image} class="img-fluid img-thumbnail rounded content m-1 my-2" alt="${element.title}"></img>
         </div>`
         break;
         case 'Romance': 
-        romanceDiv.innerHTML += `<div class="position-relative  d-inline hover">
+        romanceDiv.innerHTML += `<div class="position-relative  d-inline hover"  id=${element.id} onclick="aboutThisFilm(this)">
         <p class="position-absolute top-50 start-50 translate-middle w-100 p-2 d-inline-block">${element.title}</p>
         <img src=${element.image} class="img-fluid img-thumbnail rounded content m-1 my-2" alt="${element.title}"></img>
         </div>`
         break;
         case 'Terror': 
-        hororDiv.innerHTML += `<div class="position-relative  d-inline hover">
+        hororDiv.innerHTML += `<div class="position-relative  d-inline hover"  id=${element.id} onclick="aboutThisFilm(this)">
         <p class="position-absolute top-50 start-50 translate-middle w-100 p-2 d-inline-block">${element.title}</p>
         <img src=${element.image} class="img-fluid img-thumbnail rounded content m-1 my-2" alt="${element.title}"></img>
         </div>`
         break;
         case 'Comedia': 
-        comediDiv.innerHTML += `<div class="position-relative  d-inline hover">
+        comediDiv.innerHTML += `<div class="position-relative  d-inline hover"  id=${element.id} onclick="aboutThisFilm(this)">
         <p class="position-absolute top-50 start-50 translate-middle w-100 p-2 d-inline-block">${element.title}</p>
         <img src=${element.image} class="img-fluid img-thumbnail rounded content m-1 my-2" alt="${element.title}"></img>
         </div>`
@@ -85,12 +85,14 @@ const contentSerie = async () => {
   divContent.innerHTML='<h3 class="display-6 text-uppercase">Todas las series</h3>'
   content.forEach (element => {
     if (element.type == 'Serie') {
-      divContent.innerHTML += 
-      `<div class="position-relative  d-inline hover">
-        <p class="position-absolute top-50 start-50 translate-middle w-100 p-2 d-inline-block">${element.title}</p>
-        <img src=${element.image} class="img-fluid img-thumbnail rounded content m-1 my-2" alt="${element.title}"></img>
-      </div>`
-    } 
+      if (element.status == true) {
+        divContent.innerHTML += 
+        `<div class="position-relative d-inline hover" id=${element.id} onclick="aboutThisFilm(this)">
+          <p class="position-absolute top-50 start-50 translate-middle w-100 p-2 d-inline-block">${element.title}</p>
+          <img src=${element.image} class="img-fluid img-thumbnail rounded content m-1 my-2" alt="${element.title}"></img>
+        </div>`
+      } 
+    }
   })
 };
 
@@ -102,10 +104,10 @@ const contentMovie = async () => {
   content.forEach (element => {
     if (element.type == 'Película') {
       divContent.innerHTML += 
-      `<div class="position-relative  d-inline hover text-center">
-        <p class="position-absolute top-50 start-50 translate-middle w-100 p-2 d-inline-block">${element.title}</p>
-        <img src=${element.image} class="img-fluid img-thumbnail rounded content m-1 my-2" alt="${element.title}"></img>
-      </div>`
+      `<div class="position-relative d-inline hover" id=${element.id} onclick="aboutThisFilm(this)">
+      <p class="position-absolute top-50 start-50 translate-middle w-100 p-2 d-inline-block">${element.title}</p>
+      <img src=${element.image} class="img-fluid img-thumbnail rounded content m-1 my-2" alt="${element.title}"></img>
+    </div>`
     } 
   })
 };
@@ -120,5 +122,16 @@ const searchContent = async () => {
     alert ('Lo sentimos no tenemos lo que estas buscando :(')
   } else {
     localStorage.setItem ('title', searchedElement.title)
+    window.location.href = '../../pages/aboutFilm.html'
+
   }
+};
+
+const aboutThisFilm = async (film) => {
+  let result = await fetch ('http://localhost:3000/films')
+  let content = await result.json ()
+  let thisFilm = content.find (para => para.id == film.id)
+  localStorage.setItem ('title', thisFilm.title)
+  window.location.href = '../pages/aboutFilm.html';
+
 }

@@ -20,6 +20,8 @@ const loginUser = async (event) => {
  }
 
 localStorage.setItem('role', user.role);
+localStorage.setItem("id", user.id);
+
 
 if(user.role === 'admin'){
   alert('Ingreso Exitoso');
