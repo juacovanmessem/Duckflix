@@ -1,63 +1,29 @@
-function fetchMovies() {
-  fetch('./database/db.json')
-      .then(response => response.json())
-      .then(data => {
-          const movieList = document.getElementById('movie-list');
 
-          data.films.forEach(movie => {
-              const movieCard = document.createElement('div');
-              movieCard.className = 'col-md-4';
-
-              movieCard.innerHTML = `
-                  <div class="card">
-                      <img class="card-img-top" width="300" height="420" src="${movie.image}" alt="${movie.title}">
-                      <div class="card-body">
-                          <h5 class="card-title">${movie.title}</h5>
-                          <p class="card-text">Duración: ${movie.time}</p>
-                          <p class="card-text">Categoría: ${movie.category}</p>
-                          <p class="card-text">Año: ${movie.year}</p>
-                          <p class="card-text">Sinopsis: ${movie.sinopsis}</p>
-                          <a class="btn btn-primary" href="../pages/aboutFilm.html?id=${movie.id}">Ver Detalles</a>
-                      </div>
-                  </div>
-              `;
-
-              movieList.appendChild(movieCard);
-          });
-      })
-      .catch(error => console.error(error));
+const aboutFilm = async () => {
+    let contentTitle = localStorage.getItem ('title') 
+    let result = await fetch ('http://localhost:3000/films')
+    let content = await result.json ()
+    let movie = content.find (para => para.title == contentTitle)
+    console.log(movie)
+    
+    let div = document.getElementById ('info')
+    div.innerHTML = ` <div class="col-md-6 d-flex align-items-center h-100">
+    <div class="position-relative align-middle w-100">
+    <img src="${movie.image}" alt="" class="object-fit-contain rounded w-100 ">
+    <button class="position-absolute bottom-0 end-0 btn btn-info m-2 rounded-pill"> <i class="bi bi-play-fill"></i> Reproducir </button>
+  </div>
+</div>
+<div class="col-md-6 bg-warning-subtle rounded-4">
+  <h1 class="display-5 p-2">${movie.title}</h1>
+  <hr class="border border-info border-3 opacity-75">
+  <div class="h-auto d-inline-block p-2">
+    <span class="lead  p-2"> ${movie.time} </span>
+    <div class="vr"></div>
+    <span class="lead  p-2"> ${movie.year} </span>
+    <div class="vr"></div>
+    <span class="lead p-2"> ${movie.category} </span>
+  </div>
+  <p class="p-2 lead p-2"> ${movie.sinopsis} </p>
+</div> `
 }
-
-
-
-function fetchMovieDetails() {
-  const params = new URLSearchParams(window.location.search);
-  const movieId = params.get('id');
-
-  fetch('../database/db.json')
-      .then(response => response.json())
-      .then(data => {
-          const movie = data.films.find(item => item.id == movieId);
-
-          if (movie) {
-              document.getElementById('movie-title').textContent = movie.title;
-              document.getElementById('movie-duration').textContent = `Duración: ${movie.time}`;
-              document.getElementById('movie-category').textContent = `Categoría: ${movie.category}`;
-              document.getElementById('movie-year').textContent = `Año: ${movie.year}`;
-              document.getElementById('movie-sinopsis').textContent = `Sinopsis: ${movie.sinopsis}`;
-
-              const moviePoster = document.getElementById('movie-poster');
-              moviePoster.src = movie.image;
-              moviePoster.alt = movie.title;
-
-              // Nueva lógica para abrir 'Error404.html' al hacer clic en la imagen
-              moviePoster.addEventListener('click', function() {
-                  window.location.href = '../pages/404.html';
-              });
-          } else {
-              window.location.href = 'error.html';
-          }
-      })
-      .catch(error => console.error(error));
-}
-
+aboutFilm();
