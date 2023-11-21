@@ -122,7 +122,7 @@ const searchContent = async () => {
     alert ('Lo sentimos no tenemos lo que estas buscando :(')
   } else {
     localStorage.setItem ('title', searchedElement.title)
-    window.location.href = '../../pages/aboutFilm.html'
+    window.location.href = '../pages/aboutFilm.html';
 
   }
 };
