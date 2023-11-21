@@ -10,54 +10,56 @@
   <title> Registrarse</title>
 </head>
 <body>
-  <main><section class="container">
-    <div class="modal modal-sheet position-static d-block md-5" tabindex="-1" role="dialog" id="modalSignin">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content rounded-4 shadow border-info">
-          <div class="modal-header p-3 border-bottom-0">
-            <img src="../assets/imagenes/Duckflix.png" alt="" class="img-resposive mb-3 mx-auto" height="55px">
-          </div>
-          <div class="px-5 pb-4 border-bottom-0">
-            <h1 class="fw-bold mb-0 fs-2">Registrarse!</h1>
-          </div>
-          <div class="modal-body p-5 pt-0">
-    <div>
-
-      <form class="form"  id="registerForm">
-        <div class="mb-3">
-          <div class="mb-3">
-            <label for="name" class="form-label">Nombre/s</label>
-            <input type="text" class="form-control" id="name" value="" maxlength="30" minlength="5" required>
-          </div>
-          <div class="mb-3">
-            <label for="lastname" class="form-label">Apellido</label>
-            <input type="text" class="form-control" id="lastname" value="" maxlength="30" minlength="5" required>
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Correo Electrónico</label>
-            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" value="" maxlength="64" minlength="10" required placeholder="nombre@gmail.com">
-          </div>
-          <div class="mb-3">
-            <label for="password" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" id="password" value=""  maxlength="20" minlength="8"required>
-            <p></p>
-            <h6>Debe contener entre 8 y 15 caracteres</h6>
-          </div>
-          <div class="mb-3">
-            <label for="confirmPassword" class="form-label">Confirmar Contraseña</label>
-            <input type="password" class="form-control" id="confirmPassword" value="" maxlength="15" minlength="8" required>
-          </div>
-
-            <button type="submit" class="btn btn-primary">Registrarse</button>
-            <div class="container-fluid">
-            
-              <a class="d-flex justify-content-end" href="./login.html">Tienes una cuenta?</a>
+  <main>
+    <section class="container">
+      <div class="modal modal-sheet position-static d-block md-5" tabindex="-1" role="dialog" id="modalSignin">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content rounded-4 shadow border-info">
+            <div class="modal-header p-3 border-bottom-0">
+              <img src="../assets/imagenes/Duckflix.png" alt="" class="img-resposive mb-3 mx-auto" height="55px">
+            </div>
+            <div class="px-5 pb-4 border-bottom-0">
+              <h1 class="fw-bold mb-0 fs-2">Registrarse!</h1>
+            </div>
+            <div class="modal-body p-5 pt-0">
+            <div>
+              <form class="form"  id="registerForm">
+                <div class="mb-3">
+                  <div class="mb-3">
+                    <label for="name" class="form-label">Nombre/s</label>
+                    <input type="text" class="form-control" id="name" value="" maxlength="30" minlength="5" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="lastname" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="lastname" value="" maxlength="30" minlength="5" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" value="" maxlength="64" minlength="10" required placeholder="nombre@gmail.com">
+                  </div>
+                  <div class="mb-3">
+                    <label for="password" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="password" value=""  maxlength="20" minlength="8"required>
+                    <p></p>
+                    <h6>Debe contener entre 8 y 15 caracteres</h6>
+                  </div>
+                  <div class="mb-3">
+                    <label for="confirmPassword" class="form-label">Confirmar Contraseña</label>
+                    <input type="password" class="form-control" id="confirmPassword" value="" maxlength="15" minlength="8" required>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Registrarse</button>
+                  <div class="container-fluid">  
+                    <a class="d-flex justify-content-end" href="./login.html">Tienes una cuenta?</a>
+                  </div>
+                </div>
+              </form>
+            </div>
             </div>
           </div>
-        </div>
-      </form>
-    </div>
-  </div></div></div></div></section></main>
+        </div>  
+      </div>
+    </section>
+  </main>
      
   <script src="../js/register.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
