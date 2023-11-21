@@ -46,76 +46,9 @@
               </form>
             </li>
           </ul>
-          <ul>
-            <button class="btn text-white" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar sesión</button>
-            <div class="modal fade" id="modalLogin" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Iniciar sesión</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <form>
-                      <div class="mb-3">
-                        <label for="emailLogin" class="form-label">Correo electrónico</label>
-                        <input type="email" class="form-control" id="emailLogin" aria-describedby="emailHelp" value="" required>
-                      </div>
-                      <div class="mb-3">
-                        <label for="passwordLogin" class="form-label">Contraseña</label>
-                        <input type="password" class="form-control" id="passwordLogin" value="" required>
-                      </div>
-                      <div class="align-items-center ">  
-                        <a class="d-flex justify-content-end" href="./pages/password.html">Modificar mi contraseña</a>
-                        <button type="button" class="btn btn-primary d-flex justify-content-start" onclick="loginUser()">Ingresar</button>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <button class="btn text-white" data-bs-toggle="modal" data-bs-target="#modalRegister">Registrarse</button>
-            <div class="modal fade" id="modalRegister" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Registrarse</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <form>
-                      <div class="mb-3">
-                        <div class="mb-3">
-                          <label for="name" class="form-label">Nombre/s</label>
-                          <input type="text" class="form-control" id="name" value="" required>
-                        </div>
-                        <div class="mb-3">
-                          <label for="lastname" class="form-label">Apellido</label>
-                          <input type="text" class="form-control" id="lastname" value="" required>
-                        </div>
-                        <div class="mb-3">
-                          <label for="email" class="form-label">Correo Electrónico</label>
-                          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" value="" required>
-                        </div>
-                        <div class="mb-3">
-                          <label for="password" class="form-label">Contraseña</label>
-                          <input type="password" class="form-control" id="password" value="" required>
-                        </div>
-                          <button type="button" class="btn btn-primary" onclick="createUser()">Registrarse</button>
-                        </div>
-                      </div>
-                    </form>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </ul>
+          <div id="userName" class="m-3"></div>
+          <div id="adminButton" class="m-3"></div>
+          <button type="button" class="btn text-light" onclick="logOut()">Cerrar Sesión</button>
         </div>
       </div>
     </nav>
@@ -145,11 +78,12 @@
           <button type="button" class="btn"><a href="./404.html"><i class="bi bi-instagram h1 m-2 text-white"></i></a></button>
           <button type="button" class="btn"><a href="./404.html"><i class="bi bi-twitter h1 m-2 text-white"></i></a></i></button>
         <p>
-          <a class="btn text-white" href="./pages/404.html">Política de Privacidad | Términos y Condiciones</a></p>
+          <a class="btn text-white" href="#">Política de Privacidad | Términos y Condiciones</a></p>
       </div>
     </div>
   </div>
   </footer>
+  <script src="../js/404.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
