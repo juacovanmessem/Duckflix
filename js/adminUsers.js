@@ -22,8 +22,8 @@ const showTable=async ()=> {
 
   })
 }
-window.onload=showTable();
-const deleteUser= async (user) => { 
+window.onload = showTable();
+const deleteUser = async (user) => { 
   let result = await fetch ('http://localhost:3000/users')
   let content = await result.json ()
   let idLine = content.find (para => para.id == user.id)
