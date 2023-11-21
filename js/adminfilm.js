@@ -1,3 +1,8 @@
+const logOut = () => {
+  localStorage.removeItem('role');
+  localStorage.removeItem('id');
+  window.location.href = '../pages/login.html';
+}
 
 //ADD CONTENT BUTTON
 const addContent = async () => {
@@ -80,10 +85,12 @@ const deleteContent = async (film) => {
   let content = await result.json ()
   let idLine = content.find (para => para.id == film.id)
   let id = idLine.id
-  
-  await fetch (`http://localhost:3000/films/${id}`, {
-    method: 'DELETE',
-  });
+  let confirmThis = confirm ('¿Está seguro de que desea eliminar este item?')
+  if (confirmThis === true) {
+    await fetch (`http://localhost:3000/films/${id}`, {
+      method: 'DELETE',
+    });
+  }
 
 };
 
@@ -218,7 +225,7 @@ const spotLight = async (film) => {
         'Content-type': 'application/json; charset=UTF-8',
       }
     }) 
-    alert ('uwu')   
+    alert ('Contenido destacado con éxito')   
   }
 };
 

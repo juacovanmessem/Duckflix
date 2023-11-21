@@ -1,3 +1,10 @@
+
+const logOut = () => {
+  localStorage.removeItem('role');
+  localStorage.removeItem('id');
+  window.location.href = '../pages/login.html';
+}
+
 const showTable=async ()=> {
 
 
@@ -15,8 +22,8 @@ const showTable=async ()=> {
 
   })
 }
-window.onload=showTable();
-const deleteUser= async (user) => { 
+window.onload = showTable();
+const deleteUser = async (user) => { 
   let result = await fetch ('http://localhost:3000/users')
   let content = await result.json ()
   let idLine = content.find (para => para.id == user.id)
@@ -55,3 +62,4 @@ const editRoleUser = async (user) => {
   }
   alert("Rol modificado con exito")
 };
+
