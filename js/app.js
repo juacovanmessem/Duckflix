@@ -10,13 +10,13 @@ const spotLightContent = async () => {
   div.innerHTML = `<div class="carousel-inner">
   <div class="carousel-item active" data-bs-interval="10000">
   <img src=${findSpotLight.image} class="d-block img-fluid spotLight" alt="${findSpotLight.title}">
-  <div class="carousel-caption d-none d-md-block bgGradient">
-  <h5 class="text-light display-4 text-uppercase">${findSpotLight.title}</h5>
-  <p class="text-light">${findSpotLight.sinopsis}</p>
-  <button type="button" class="btn btn-light"><a href="./pages/aboutFilm.html" class="nav-link active">
+  <div class="carousel-caption d-none d-md-block">
+  <h5 class="text-light display-4 text-uppercase bgGradient">${findSpotLight.title}</h5>
+  <p class="text-light bgGradient bgText">${findSpotLight.sinopsis}</p>
+  <button type="button" class="btn btn-light bgGradient" onclick="aboutThisFilm(this)" id="${findSpotLight.id}">
   Mas información
   </a></button>
-  <button type="button" class="btn btn-light"><a href="./pages/404.html" class="nav-link active">
+  <button type="button" class="btn btn-light bgGradient"><a href="./pages/404.html" class="nav-link active">
   <i class="bi bi-play-fill"></i>Reproducir
   </a></button>
   </div>
@@ -41,34 +41,34 @@ const categoryContent = async () => {
     if (element.status == true) {
       switch (element.category) {
         case 'Acción': 
-        actionDiv.innerHTML += `<div class="position-relative  d-inline hover"  id=${element.id} onclick="aboutThisFilm(this)">
+        actionDiv.innerHTML += `<div class=" col-lg-3 col-md-4 col-sm-6 col-12"><div class="position-relative  d-inline hover"  id=${element.id} onclick="aboutThisFilm(this)">
         <p class="position-absolute top-50 start-50 translate-middle w-100 p-2 d-inline-block">${element.title}</p>
         <img src=${element.image} class="img-fluid img-thumbnail rounded content m-1 my-2" alt="${element.title}"></img>
-        </div>`
+        </div></div>`
         break;
         case 'Ciencia Ficción': 
-        cifiDiv.innerHTML += `<div class="position-relative  d-inline hover"  id=${element.id} onclick="aboutThisFilm(this)">
+        cifiDiv.innerHTML += `<div class=" col-lg-3 col-md-4 col-sm-6 col-12"><div class="position-relative  d-inline hover"  id=${element.id} onclick="aboutThisFilm(this)">
         <p class="position-absolute top-50 start-50 translate-middle w-100 p-2 d-inline-block">${element.title}</p>
         <img src=${element.image} class="img-fluid img-thumbnail rounded content m-1 my-2" alt="${element.title}"></img>
-        </div>`
+        </div></div>`
         break;
         case 'Romance': 
-        romanceDiv.innerHTML += `<div class="position-relative  d-inline hover"  id=${element.id} onclick="aboutThisFilm(this)">
+        romanceDiv.innerHTML += `<div class=" col-lg-3 col-md-4 col-sm-6 col-12"><div class="position-relative  d-inline hover"  id=${element.id} onclick="aboutThisFilm(this)">
         <p class="position-absolute top-50 start-50 translate-middle w-100 p-2 d-inline-block">${element.title}</p>
         <img src=${element.image} class="img-fluid img-thumbnail rounded content m-1 my-2" alt="${element.title}"></img>
-        </div>`
+        </div></div>`
         break;
         case 'Terror': 
-        hororDiv.innerHTML += `<div class="position-relative  d-inline hover"  id=${element.id} onclick="aboutThisFilm(this)">
+        hororDiv.innerHTML += `<div class=" col-lg-3 col-md-4 col-sm-6 col-12"><div class="position-relative  d-inline hover"  id=${element.id} onclick="aboutThisFilm(this)">
         <p class="position-absolute top-50 start-50 translate-middle w-100 p-2 d-inline-block">${element.title}</p>
         <img src=${element.image} class="img-fluid img-thumbnail rounded content m-1 my-2" alt="${element.title}"></img>
-        </div>`
+        </div></div>`
         break;
         case 'Comedia': 
-        comediDiv.innerHTML += `<div class="position-relative  d-inline hover"  id=${element.id} onclick="aboutThisFilm(this)">
+        comediDiv.innerHTML += `<div class=" col-lg-3 col-md-4 col-sm-6 col-12"><div class="position-relative  d-inline hover"  id=${element.id} onclick="aboutThisFilm(this)">
         <p class="position-absolute top-50 start-50 translate-middle w-100 p-2 d-inline-block">${element.title}</p>
         <img src=${element.image} class="img-fluid img-thumbnail rounded content m-1 my-2" alt="${element.title}"></img>
-        </div>`
+        </div></div>`
         break;
         default:
         break;
@@ -87,10 +87,10 @@ const contentSerie = async () => {
     if (element.type == 'Serie') {
       if (element.status == true) {
         divContent.innerHTML += 
-        `<div class="position-relative d-inline hover" id=${element.id} onclick="aboutThisFilm(this)">
+        `<div class=" col-lg-3 col-md-4 col-sm-6 col-12"><div class="position-relative d-inline hover" id=${element.id} onclick="aboutThisFilm(this)">
           <p class="position-absolute top-50 start-50 translate-middle w-100 p-2 d-inline-block">${element.title}</p>
           <img src=${element.image} class="img-fluid img-thumbnail rounded content m-1 my-2" alt="${element.title}"></img>
-        </div>`
+        </div></div>`
       } 
     }
   })
@@ -103,11 +103,13 @@ const contentMovie = async () => {
   divContent.innerHTML='<h3 class="display-6 text-uppercase">Todas las películas</h3>'
   content.forEach (element => {
     if (element.type == 'Película') {
-      divContent.innerHTML += 
-      `<div class="position-relative d-inline hover" id=${element.id} onclick="aboutThisFilm(this)">
-      <p class="position-absolute top-50 start-50 translate-middle w-100 p-2 d-inline-block">${element.title}</p>
-      <img src=${element.image} class="img-fluid img-thumbnail rounded content m-1 my-2" alt="${element.title}"></img>
-    </div>`
+      if (element.status == true) {
+        divContent.innerHTML += 
+        `<div class=" col-lg-3 col-md-4 col-sm-6 col-12"><div class="position-relative d-inline hover" id=${element.id} onclick="aboutThisFilm(this)">
+        <p class="position-absolute top-50 start-50 translate-middle w-100 p-2 d-inline-block">${element.title}</p>
+        <img src=${element.image} class="img-fluid img-thumbnail rounded content m-1 my-2" alt="${element.title}"></img>
+      </div></div>`
+      }
     } 
   })
 };

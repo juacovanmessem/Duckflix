@@ -32,9 +32,9 @@ function enviarMail() {
   let mail = document.getElementById("mail").value
   let asunto = document.getElementById("asunto").value
   let mensaje = document.getElementById("textArea").value
-  console.log(mail);
+
   if ('' === usuario, '' === mail, '' === asunto, '' === mensaje) {
-    alert('Complete el formulario')
+    return
   } else {
     Email.send({
     Host : "smtp.elasticemail.com",

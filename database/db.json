@@ -5,7 +5,7 @@
       "lastname": "perez",
       "email": "laura@gmail.com",
       "password": "laura1234",
-      "role": "admin",
+      "role": "client",
       "id": 3
     },
     {
@@ -20,7 +20,7 @@
       "name": "joaquin",
       "lastname": "van messem",
       "email": "vanmessemjoaquin@gmail.com",
-      "password": "juaco1234",
+      "password": "juacoadmin12345",
       "role": "admin",
       "id": 5
     },
@@ -49,30 +49,6 @@
       "id": 8
     },
     {
-      "name": "jorge",
-      "lastname": "bravo",
-      "email": "jorge@gmail.com",
-      "password": "jorge",
-      "role": "client",
-      "id": 9
-    },
-    {
-      "name": "jorge",
-      "lastname": "barrionuevo",
-      "email": "jorge@gmail.com",
-      "password": "jor123",
-      "role": "client",
-      "id": 10
-    },
-    {
-      "name": "jorge",
-      "lastname": "bravo",
-      "email": "jorge@gmail.com",
-      "password": "1234",
-      "role": "client",
-      "id": 11
-    },
-    {
       "name": "josefina",
       "lastname": "bernadal",
       "email": "josefina@gmail.com",
@@ -87,14 +63,6 @@
       "password": "luciano1234",
       "role": "client",
       "id": 13
-    },
-    {
-      "name": "luciano",
-      "lastname": "bravo",
-      "email": "luciano@gmail.com",
-      "password": "luciano123",
-      "role": "client",
-      "id": 14
     },
     {
       "name": "Antonio",
@@ -125,8 +93,24 @@
       "lastname": "bravo",
       "email": "carlos@gmail.com",
       "password": "carlos2023",
-      "role": "admin",
+      "role": "client",
       "id": 18
+    },
+    {
+      "name": "Maximiliano",
+      "lastname": "Karsvnie",
+      "email": "maxikarsvnie@gmail.com",
+      "password": "maxi1234",
+      "role": "admin",
+      "id": 19
+    },
+    {
+      "name": "andrea",
+      "lastname": "skamenlka",
+      "email": "andy@gmail.com",
+      "password": "andy1234",
+      "role": "client",
+      "id": 20
     }
   ],
   "films": [
@@ -149,8 +133,8 @@
       "type": "Película",
       "time": "1hs 51min",
       "year": "2023",
-      "image": "https://images.mubicdn.net/images/film/370012/cache-852280-1675047738/image-w1280.jpg?size=800x",
-      "status": true,
+      "image": "https://www.cinema.de/sites/default/files/styles/cin_landscape_510/public/sync/cms3.cinema.de/imgdb/import/dreams2/63ec/924/8/63ec924876ed8b13b4d425f2.jpeg.jpg?itok=_lmSccrp",
+      "status": false,
       "spotLight": false,
       "id": 3
     },
@@ -235,7 +219,7 @@
       "year": "2016",
       "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/star/56E433A853B36B927FDB034942B977C6890C9FB954AA6F305994CA7559CCAC6F/scale?width=1200&aspectRatio=1.78&format=jpeg",
       "status": true,
-      "spotLight": false,
+      "spotLight": true,
       "id": 10
     },
     {
@@ -245,7 +229,7 @@
       "type": "Película",
       "time": "2hs 26min",
       "year": "1979",
-      "image": "https://media.gq.com.mx/photos/5be9d03c84b96e090494049a/master/w_1600%2Cc_limit/el_resplandor_kubrick_3513.jpg",
+      "image": "https://pics.filmaffinity.com/El_resplandor-671484101-large.jpg",
       "status": true,
       "spotLight": false,
       "id": 11
@@ -265,11 +249,11 @@
     {
       "title": "Titanic",
       "category": "Romance",
-      "sinopsis": "Jack (DiCaprio), un joven artista, gana en una partida de cartas un pasaje para viajar a América en el Titanic, el transatlántico más grande y seguro jamás construido. A bordo conoce a Rose (Kate Winslet), una joven de una buena familia venida a menos que va a contraer un matrimonio de conveniencia con Cal (Billy Zane), un millonario engreído a quien sólo interesa el prestigioso apellido de su prometida. Jack y Rose se enamoran, pero el prometido y la madre de ella ponen todo tipo de trabas a su relación. Mientras, el gigantesco y lujoso transatlántico se aproxima hacia un inmenso iceberg.",
+      "sinopsis": "Una joven de la alta sociedad abandona a su arrogante pretendiente por un artista humilde en el trasatlántico que se hundió durante su viaje inaugural.",
       "type": "Película",
       "time": "3hs 15min",
       "year": "1997",
-      "image": "https://i.blogs.es/4a9cb1/titanic/840_560.jpeg",
+      "image": "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2022/01/titanic-2577593.jpg?tf=3840x",
       "status": true,
       "spotLight": false,
       "id": 13
@@ -281,7 +265,7 @@
       "type": "Serie",
       "time": "12 Temporadas",
       "year": "2007",
-      "image": "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2016/03/578522-11-mejores-cameos-big-bang-theory.jpg?tf=3840x",
+      "image": "https://i.ytimg.com/vi/JTnpj6fXUIo/maxresdefault.jpg",
       "status": true,
       "spotLight": false,
       "id": 14
@@ -509,9 +493,9 @@
       "type": "Película",
       "time": "1hs 41min",
       "year": "2014",
-      "image": "https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2018/01/John-Wick.jpg?fit=2560%2C1440&quality=50&strip=all&ssl=1",
+      "image": "https://desdekryptonhastamordor.files.wordpress.com/2016/01/47-4.jpg",
       "status": true,
-      "spotLight": true,
+      "spotLight": false,
       "id": 33
     },
     {

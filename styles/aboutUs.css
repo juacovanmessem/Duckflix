@@ -8,5 +8,10 @@ body{
   background: linear-gradient(to right, #26798E, #63CAA7, #FFC172, #FFE3B3);
 }
 .imagen{
-  height: 15rem;
+  height: auto;
+  max-height: 15rem;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  
 }
