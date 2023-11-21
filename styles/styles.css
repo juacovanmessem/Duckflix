@@ -14,7 +14,7 @@ footer{
   height: 60vh;
 }
 .content {
-  width: 17%;
+  width: 90%;
   height: 150px;
   background-color: #FFE3B3;
 }
@@ -28,7 +28,8 @@ footer{
   background:linear-gradient(#174855, #26798E);
 }
 .hover:hover img{
-  width: 20%;
+  width: 100%;
+  
   height: 175px;
   box-shadow: #26798E .3rem .3rem;
   transition: 1.5s;
@@ -37,5 +38,9 @@ footer{
 }
 
 .bgGradient{
-  background: linear-gradient(#00000000, #0000005b, #000000);;
+  filter: drop-shadow(0 0.1rem 0.1rem rgb(0, 0, 0));
+}
+
+.bgText {
+  background-color: #17485518;
 }

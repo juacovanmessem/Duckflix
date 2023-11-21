@@ -2,6 +2,17 @@ const logOut = () => {
   localStorage.removeItem('role');
   localStorage.removeItem('id');
   window.location.href = '../pages/login.html';
+};
+
+const checkAdminRole = () => {
+  let role = localStorage.getItem ('role');
+  if (role == 'admin') {
+    return
+  } else if (role == 'client') {
+    window.location.href = '../index.html';
+  } else {
+    window.location.href = '../pages/login.html'
+  }
 }
 
 //ADD CONTENT BUTTON

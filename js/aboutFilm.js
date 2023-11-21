@@ -38,16 +38,16 @@ const aboutFilm = async () => {
     let result = await fetch ('http://localhost:3000/films')
     let content = await result.json ()
     let movie = content.find (para => para.title == contentTitle)
-    console.log(movie)
+  
     
     let div = document.getElementById ('info')
-    div.innerHTML = ` <div class="col-md-6 d-flex align-items-center h-100">
+    div.innerHTML = ` <div class="col-lg-5 col-md-6 col-12 d-flex align-items-center h-100">
     <div class="position-relative align-middle w-100">
     <img src="${movie.image}" alt="" class="object-fit-contain rounded w-100 ">
-    <button class="position-absolute bottom-0 end-0 btn btn-info m-2 rounded-pill"> <i class="bi bi-play-fill"></i> Reproducir </button>
+    <a class="position-absolute bottom-0 end-0 btn btn-info m-2 rounded-pill" href="../pages/404.html"> <i class="bi bi-play-fill"></i> Reproducir </a>
   </div>
 </div>
-<div class="col-md-6 bg-warning-subtle rounded-4">
+<div class="col-lg-5 col-md-6 col-12 bg-warning-subtle rounded-4">
   <h1 class="display-5 p-2">${movie.title}</h1>
   <hr class="border border-info border-3 opacity-75">
   <div class="h-auto d-inline-block p-2">
