@@ -20,7 +20,7 @@
       "name": "joaquin",
       "lastname": "van messem",
       "email": "vanmessemjoaquin@gmail.com",
-      "password": "juacoadmin12345",
+      "password": "juacoadmin",
       "role": "admin",
       "id": 5
     },
@@ -111,6 +111,14 @@
       "password": "andy1234",
       "role": "client",
       "id": 20
+    },
+    {
+      "name": "ADMIN",
+      "lastname": "TESTING",
+      "email": "test@gmail.com",
+      "password": "test1234",
+      "role": "admin",
+      "id": 21
     }
   ],
   "films": [
